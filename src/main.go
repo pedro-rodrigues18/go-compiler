@@ -13,30 +13,31 @@ import (
 )
 
 func main() {
-	// Read the input file
-	file, _ := os.Open("./input/main.txt")
-
-	fileInfo, _ := file.Stat()
-
-	// fmt.Println(fileInfo.Size())
-
-	var size int64 = fileInfo.Size()
-
-	fileContent := make([]byte, size)
-
-	_, err := file.Read(fileContent)
-
+	file, err := os.Open("./input/main.txt")
 	if err != nil {
 		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+
+	fileInfo, err := file.Stat()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	size := fileInfo.Size()
+	fileContent := make([]byte, size)
+
+	_, err = file.Read(fileContent)
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
 
 	sourceCode := string(fileContent)
-	file.Close()
-
-	// Call function Scan() to get all tokens
 	tokens := lexical.Scan(sourceCode)
 
-	// Print all tokens and their types
 	for _, token := range tokens {
 		fmt.Printf("%v: %v\n", token.Type, token.Value)
 	}

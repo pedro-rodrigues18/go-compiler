@@ -7,101 +7,92 @@ import (
 func Scan(sourceCode string) []Token {
 	var tokens []Token
 	start := 0
+	length := len(sourceCode)
 
-	for i := range sourceCode {
-		switch {
-		case isIdentifier(sourceCode[start : i+1]):
+	for start < length {
+		char := rune(sourceCode[start])
+
+		if unicode.IsSpace(char) {
+			start++
 			continue
-		case unicode.IsSpace(rune(sourceCode[i])):
-			if start < i {
-				token := Token{Type: IDENTIFIER, Value: sourceCode[start:i]}
-				tokens = append(tokens, token)
-			}
-			start = i + 1
-		case isKeyword(sourceCode[start : i+1]):
-			token := Token{Type: KEYWORD, Value: sourceCode[start : i+1]}
-			tokens = append(tokens, token)
-			start = i + 1
-
-		case isString(sourceCode[start : i+1]):
-			token := Token{Type: STRING, Value: sourceCode[start : i+1]}
-			tokens = append(tokens, token)
-		case isNumber(sourceCode[start : i+1]):
-			token := Token{Type: NUMBER, Value: sourceCode[start : i+1]}
-			tokens = append(tokens, token)
-			start = i + 1
-
-		default:
-			token := Token{Type: SYMBOL, Value: string(sourceCode[i])}
-			tokens = append(tokens, token)
-			start = i + 1
 		}
-	}
-	if start < len(sourceCode) {
-		token := Token{Type: IDENTIFIER, Value: sourceCode[start:]}
-		tokens = append(tokens, token)
+
+		if isIdentifierChar(char) {
+			end := start + 1
+			for end < length && isIdentifierChar(rune(sourceCode[end])) {
+				end++
+			}
+			value := sourceCode[start:end]
+			tokenType := IDENTIFIER
+			if isKeyword(value) {
+				tokenType = KEYWORD
+			}
+			tokens = append(tokens, Token{Type: tokenType, Value: value})
+			start = end
+			continue
+		}
+
+		if unicode.IsDigit(char) {
+			end := start + 1
+			dotCount := 0
+			for end < length && (unicode.IsDigit(rune(sourceCode[end])) || (rune(sourceCode[end]) == '.' && dotCount == 0)) {
+				if rune(sourceCode[end]) == '.' {
+					dotCount++
+				}
+				end++
+			}
+			value := sourceCode[start:end]
+			tokenType := INTEGER
+			if dotCount == 1 {
+				tokenType = DECIMAL
+			}
+			tokens = append(tokens, Token{Type: tokenType, Value: value})
+			start = end
+			continue
+		}
+
+		if char == '"' {
+			end := start + 1
+			for end < length && rune(sourceCode[end]) != '"' {
+				end++
+			}
+			if end < length {
+				end++
+			}
+			value := sourceCode[start:end]
+			tokens = append(tokens, Token{Type: STRING, Value: value})
+			start = end
+			continue
+		}
+
+		tokens = append(tokens, Token{Type: SYMBOL, Value: string(char)})
+		start++
 	}
 
 	tokens = append(tokens, Token{Type: EOF, Value: ""})
-
 	return tokens
 }
 
 func isKeyword(value string) bool {
 	keywords := map[string]bool{
-		"auto":     true,
-		"break":    true,
-		"case":     true,
-		"char":     true,
-		"const":    true,
-		"continue": true,
-		"default":  true,
-		"do":       true,
-		"double":   true,
-		"else":     true,
-		"float":    true,
-		"for":      true,
-		"if":       true,
-		"int":      true,
-		"long":     true,
-		"return":   true,
-		"sizeof":   true,
-		"static":   true,
-		"struct":   true,
-		"switch":   true,
-		"typedef":  true,
-		"unsigned": true,
-		"void":     true,
-		"while":    true,
+		"int":     true,
+		"float":   true,
+		"char":    true,
+		"boolean": true,
+		"void":    true,
+		"if":      true,
+		"else":    true,
+		"for":     true,
+		"while":   true,
+		"scanf":   true,
+		"printf":  true,
+		"main":    true,
+		"return":  true,
 	}
 
 	return keywords[value]
 }
 
-func isIdentifier(value string) bool {
-	if !unicode.IsLetter(rune(value[0])) && value[0] != '_' {
-		return false
-	}
-	for _, ch := range value {
-		if !unicode.IsLetter(ch) && !unicode.IsDigit(ch) && ch != '_' {
-			return false
-		}
-	}
-	return true
-}
-
-func isNumber(value string) bool {
-	for _, r := range value {
-		if !unicode.IsNumber(r) {
-			return false
-		}
-	}
-	return true
-}
-
-func isString(value string) bool {
-	if value[0] != '"' || value[len(value)-1] != '"' {
-		return false
-	}
-	return true
+func isIdentifierChar(ch rune) bool {
+	return unicode.IsLetter(ch) || unicode.IsDigit(ch) || ch == '_'
 }

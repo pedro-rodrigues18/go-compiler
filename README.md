@@ -9,13 +9,12 @@ The ideia is fix the concepts of compiler construction, like how Lexical Analysi
 ## Roadmap
 
 - [x] Lexical analysis
-- [ ] Syntax analysis
-- [ ] Semantic analysis
+- [x] Syntax analysis
 
 ## Usage
 
 ```bash
-go run src/main.go
+go run src/main.go input/main.txt
 ```
 
 ## Additional information

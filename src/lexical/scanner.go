@@ -7,7 +7,6 @@ import (
 func Scan(sourceCode string) []Token {
 	var tokens []Token
 	start := 0
-	length := len(sourceCode)
 
 	for i := 0; i < len(sourceCode); i++ {
 		for start < len(sourceCode) && unicode.IsSpace(rune(sourceCode[start])) {
@@ -91,8 +90,4 @@ func isKeyword(value string) bool {
 	}
 
 	return keywords[value]
-}
-
-func isIdentifierChar(ch rune) bool {
-	return unicode.IsLetter(ch) || unicode.IsDigit(ch) || ch == '_'
 }

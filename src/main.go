@@ -25,13 +25,13 @@ func (d *MyErrorListener) SyntaxError(recognizer antlr.Recognizer, offendingSymb
 }
 
 type myListener struct {
-	*parser.BaseMyGrammarListener
+	*parser.BaseGrammarListener
 }
 
 func main() {
 	input, _ := antlr.NewFileStream(os.Args[1])
 
-	lexer := parser.NewMyGrammarLexer(input)
+	lexer := parser.NewGrammarLexer(input)
 
 	tokens := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 
@@ -52,7 +52,9 @@ func main() {
 		}
 	}
 
-	p := parser.NewMyGrammarParser(tokens)
+	fmt.Print("\n")
+
+	p := parser.NewGrammarParser(tokens)
 
 	errorListener := &MyErrorListener{}
 	p.RemoveErrorListeners()
@@ -66,5 +68,5 @@ func main() {
 	listener := &myListener{}
 	antlr.ParseTreeWalkerDefault.Walk(listener, tree)
 
-	fmt.Println("\nAnálise sintática completa!")
+	fmt.Println("\nAnálise sintática concluída.")
 }

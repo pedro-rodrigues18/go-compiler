@@ -1,6 +1,6 @@
-// Code generated from MyGrammar.g4 by ANTLR 4.13.0. DO NOT EDIT.
+// Code generated from Grammar.g4 by ANTLR 4.13.0. DO NOT EDIT.
 
-package parser // MyGrammar
+package parser // Grammar
 
 import (
 	"fmt"
@@ -15,11 +15,11 @@ var _ = fmt.Printf
 var _ = strconv.Itoa
 var _ = sync.Once{}
 
-type MyGrammarParser struct {
+type GrammarParser struct {
 	*antlr.BaseParser
 }
 
-var MyGrammarParserStaticData struct {
+var GrammarParserStaticData struct {
 	once                   sync.Once
 	serializedATN          []int32
 	LiteralNames           []string
@@ -30,8 +30,8 @@ var MyGrammarParserStaticData struct {
 	decisionToDFA          []*antlr.DFA
 }
 
-func mygrammarParserInit() {
-	staticData := &MyGrammarParserStaticData
+func grammarParserInit() {
+	staticData := &GrammarParserStaticData
 	staticData.LiteralNames = []string{
 		"", "'['", "']'", "','", "'func'", "'||'", "'&&'", "'!'", "", "", "",
 		"", "", "'main'", "'int'", "'float'", "'char'", "'boolean'", "'void'",
@@ -214,121 +214,121 @@ func mygrammarParserInit() {
 	}
 }
 
-// MyGrammarParserInit initializes any static state used to implement MyGrammarParser. By default the
+// GrammarParserInit initializes any static state used to implement GrammarParser. By default the
 // static state used to implement the parser is lazily initialized during the first call to
-// NewMyGrammarParser(). You can call this function if you wish to initialize the static state ahead
+// NewGrammarParser(). You can call this function if you wish to initialize the static state ahead
 // of time.
-func MyGrammarParserInit() {
-	staticData := &MyGrammarParserStaticData
-	staticData.once.Do(mygrammarParserInit)
+func GrammarParserInit() {
+	staticData := &GrammarParserStaticData
+	staticData.once.Do(grammarParserInit)
 }
 
-// NewMyGrammarParser produces a new parser instance for the optional input antlr.TokenStream.
-func NewMyGrammarParser(input antlr.TokenStream) *MyGrammarParser {
-	MyGrammarParserInit()
-	this := new(MyGrammarParser)
+// NewGrammarParser produces a new parser instance for the optional input antlr.TokenStream.
+func NewGrammarParser(input antlr.TokenStream) *GrammarParser {
+	GrammarParserInit()
+	this := new(GrammarParser)
 	this.BaseParser = antlr.NewBaseParser(input)
-	staticData := &MyGrammarParserStaticData
+	staticData := &GrammarParserStaticData
 	this.Interpreter = antlr.NewParserATNSimulator(this, staticData.atn, staticData.decisionToDFA, staticData.PredictionContextCache)
 	this.RuleNames = staticData.RuleNames
 	this.LiteralNames = staticData.LiteralNames
 	this.SymbolicNames = staticData.SymbolicNames
-	this.GrammarFileName = "MyGrammar.g4"
+	this.GrammarFileName = "Grammar.g4"
 
 	return this
 }
 
-// MyGrammarParser tokens.
+// GrammarParser tokens.
 const (
-	MyGrammarParserEOF       = antlr.TokenEOF
-	MyGrammarParserT__0      = 1
-	MyGrammarParserT__1      = 2
-	MyGrammarParserT__2      = 3
-	MyGrammarParserT__3      = 4
-	MyGrammarParserT__4      = 5
-	MyGrammarParserT__5      = 6
-	MyGrammarParserT__6      = 7
-	MyGrammarParserCONSTANTE = 8
-	MyGrammarParserNUM_INT   = 9
-	MyGrammarParserNUM_DEC   = 10
-	MyGrammarParserTEXTO     = 11
-	MyGrammarParserCOMP      = 12
-	MyGrammarParserMAIN      = 13
-	MyGrammarParserINT       = 14
-	MyGrammarParserFLOAT     = 15
-	MyGrammarParserCHAR      = 16
-	MyGrammarParserBOOLEAN   = 17
-	MyGrammarParserVOID      = 18
-	MyGrammarParserRETURN    = 19
-	MyGrammarParserIF        = 20
-	MyGrammarParserELSE      = 21
-	MyGrammarParserWHILE     = 22
-	MyGrammarParserSCANF     = 23
-	MyGrammarParserPRINTLN   = 24
-	MyGrammarParserLPAREN    = 25
-	MyGrammarParserRPAREN    = 26
-	MyGrammarParserLBRACE    = 27
-	MyGrammarParserRBRACE    = 28
-	MyGrammarParserSEMI      = 29
-	MyGrammarParserASSIGN    = 30
-	MyGrammarParserPLUS      = 31
-	MyGrammarParserMINUS     = 32
-	MyGrammarParserMUL       = 33
-	MyGrammarParserDIV       = 34
-	MyGrammarParserMOD       = 35
-	MyGrammarParserID        = 36
-	MyGrammarParserWS        = 37
+	GrammarParserEOF       = antlr.TokenEOF
+	GrammarParserT__0      = 1
+	GrammarParserT__1      = 2
+	GrammarParserT__2      = 3
+	GrammarParserT__3      = 4
+	GrammarParserT__4      = 5
+	GrammarParserT__5      = 6
+	GrammarParserT__6      = 7
+	GrammarParserCONSTANTE = 8
+	GrammarParserNUM_INT   = 9
+	GrammarParserNUM_DEC   = 10
+	GrammarParserTEXTO     = 11
+	GrammarParserCOMP      = 12
+	GrammarParserMAIN      = 13
+	GrammarParserINT       = 14
+	GrammarParserFLOAT     = 15
+	GrammarParserCHAR      = 16
+	GrammarParserBOOLEAN   = 17
+	GrammarParserVOID      = 18
+	GrammarParserRETURN    = 19
+	GrammarParserIF        = 20
+	GrammarParserELSE      = 21
+	GrammarParserWHILE     = 22
+	GrammarParserSCANF     = 23
+	GrammarParserPRINTLN   = 24
+	GrammarParserLPAREN    = 25
+	GrammarParserRPAREN    = 26
+	GrammarParserLBRACE    = 27
+	GrammarParserRBRACE    = 28
+	GrammarParserSEMI      = 29
+	GrammarParserASSIGN    = 30
+	GrammarParserPLUS      = 31
+	GrammarParserMINUS     = 32
+	GrammarParserMUL       = 33
+	GrammarParserDIV       = 34
+	GrammarParserMOD       = 35
+	GrammarParserID        = 36
+	GrammarParserWS        = 37
 )
 
-// MyGrammarParser rules.
+// GrammarParser rules.
 const (
-	MyGrammarParserRULE_programa            = 0
-	MyGrammarParserRULE_listaFuncoes        = 1
-	MyGrammarParserRULE_decFuncao           = 2
-	MyGrammarParserRULE_tipoRetorno         = 3
-	MyGrammarParserRULE_tipo                = 4
-	MyGrammarParserRULE_tipoBase            = 5
-	MyGrammarParserRULE_dimensao            = 6
-	MyGrammarParserRULE_parametros          = 7
-	MyGrammarParserRULE_listaParametros     = 8
-	MyGrammarParserRULE_principal           = 9
-	MyGrammarParserRULE_bloco               = 10
-	MyGrammarParserRULE_listaVariaveis      = 11
-	MyGrammarParserRULE_listaId             = 12
-	MyGrammarParserRULE_comandos            = 13
-	MyGrammarParserRULE_comando             = 14
-	MyGrammarParserRULE_leitura             = 15
-	MyGrammarParserRULE_termoLeitura        = 16
-	MyGrammarParserRULE_novoTermoLeitura    = 17
-	MyGrammarParserRULE_dimensao2           = 18
-	MyGrammarParserRULE_escrita             = 19
-	MyGrammarParserRULE_termoEscrita        = 20
-	MyGrammarParserRULE_novoTermoEscrita    = 21
-	MyGrammarParserRULE_selecao             = 22
-	MyGrammarParserRULE_senao               = 23
-	MyGrammarParserRULE_enquanto            = 24
-	MyGrammarParserRULE_atribuicao          = 25
-	MyGrammarParserRULE_complemento         = 26
-	MyGrammarParserRULE_funcao              = 27
-	MyGrammarParserRULE_argumentos          = 28
-	MyGrammarParserRULE_novoArgumento       = 29
-	MyGrammarParserRULE_retorno             = 30
-	MyGrammarParserRULE_expressao           = 31
-	MyGrammarParserRULE_exprOu              = 32
-	MyGrammarParserRULE_exprOu2             = 33
-	MyGrammarParserRULE_exprE               = 34
-	MyGrammarParserRULE_exprE2              = 35
-	MyGrammarParserRULE_exprRelacional      = 36
-	MyGrammarParserRULE_exprRelacional2     = 37
-	MyGrammarParserRULE_exprAditiva         = 38
-	MyGrammarParserRULE_exprAditiva2        = 39
-	MyGrammarParserRULE_opAditivo           = 40
-	MyGrammarParserRULE_exprMultiplicativa  = 41
-	MyGrammarParserRULE_exprMultiplicativa2 = 42
-	MyGrammarParserRULE_opMultiplicativo    = 43
-	MyGrammarParserRULE_fator               = 44
-	MyGrammarParserRULE_termo               = 45
-	MyGrammarParserRULE_sinal               = 46
+	GrammarParserRULE_programa            = 0
+	GrammarParserRULE_listaFuncoes        = 1
+	GrammarParserRULE_decFuncao           = 2
+	GrammarParserRULE_tipoRetorno         = 3
+	GrammarParserRULE_tipo                = 4
+	GrammarParserRULE_tipoBase            = 5
+	GrammarParserRULE_dimensao            = 6
+	GrammarParserRULE_parametros          = 7
+	GrammarParserRULE_listaParametros     = 8
+	GrammarParserRULE_principal           = 9
+	GrammarParserRULE_bloco               = 10
+	GrammarParserRULE_listaVariaveis      = 11
+	GrammarParserRULE_listaId             = 12
+	GrammarParserRULE_comandos            = 13
+	GrammarParserRULE_comando             = 14
+	GrammarParserRULE_leitura             = 15
+	GrammarParserRULE_termoLeitura        = 16
+	GrammarParserRULE_novoTermoLeitura    = 17
+	GrammarParserRULE_dimensao2           = 18
+	GrammarParserRULE_escrita             = 19
+	GrammarParserRULE_termoEscrita        = 20
+	GrammarParserRULE_novoTermoEscrita    = 21
+	GrammarParserRULE_selecao             = 22
+	GrammarParserRULE_senao               = 23
+	GrammarParserRULE_enquanto            = 24
+	GrammarParserRULE_atribuicao          = 25
+	GrammarParserRULE_complemento         = 26
+	GrammarParserRULE_funcao              = 27
+	GrammarParserRULE_argumentos          = 28
+	GrammarParserRULE_novoArgumento       = 29
+	GrammarParserRULE_retorno             = 30
+	GrammarParserRULE_expressao           = 31
+	GrammarParserRULE_exprOu              = 32
+	GrammarParserRULE_exprOu2             = 33
+	GrammarParserRULE_exprE               = 34
+	GrammarParserRULE_exprE2              = 35
+	GrammarParserRULE_exprRelacional      = 36
+	GrammarParserRULE_exprRelacional2     = 37
+	GrammarParserRULE_exprAditiva         = 38
+	GrammarParserRULE_exprAditiva2        = 39
+	GrammarParserRULE_opAditivo           = 40
+	GrammarParserRULE_exprMultiplicativa  = 41
+	GrammarParserRULE_exprMultiplicativa2 = 42
+	GrammarParserRULE_opMultiplicativo    = 43
+	GrammarParserRULE_fator               = 44
+	GrammarParserRULE_termo               = 45
+	GrammarParserRULE_sinal               = 46
 )
 
 // IProgramaContext is an interface to support dynamic dispatch.
@@ -355,13 +355,13 @@ type ProgramaContext struct {
 func NewEmptyProgramaContext() *ProgramaContext {
 	var p = new(ProgramaContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_programa
+	p.RuleIndex = GrammarParserRULE_programa
 	return p
 }
 
 func InitEmptyProgramaContext(p *ProgramaContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_programa
+	p.RuleIndex = GrammarParserRULE_programa
 }
 
 func (*ProgramaContext) IsProgramaContext() {}
@@ -372,7 +372,7 @@ func NewProgramaContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_programa
+	p.RuleIndex = GrammarParserRULE_programa
 
 	return p
 }
@@ -412,7 +412,7 @@ func (s *ProgramaContext) Principal() IPrincipalContext {
 }
 
 func (s *ProgramaContext) EOF() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserEOF, 0)
+	return s.GetToken(GrammarParserEOF, 0)
 }
 
 func (s *ProgramaContext) GetRuleContext() antlr.RuleContext {
@@ -424,20 +424,20 @@ func (s *ProgramaContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 }
 
 func (s *ProgramaContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterPrograma(s)
 	}
 }
 
 func (s *ProgramaContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitPrograma(s)
 	}
 }
 
-func (p *MyGrammarParser) Programa() (localctx IProgramaContext) {
+func (p *GrammarParser) Programa() (localctx IProgramaContext) {
 	localctx = NewProgramaContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 0, MyGrammarParserRULE_programa)
+	p.EnterRule(localctx, 0, GrammarParserRULE_programa)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(94)
@@ -449,7 +449,7 @@ func (p *MyGrammarParser) Programa() (localctx IProgramaContext) {
 	}
 	{
 		p.SetState(96)
-		p.Match(MyGrammarParserEOF)
+		p.Match(GrammarParserEOF)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -492,13 +492,13 @@ type ListaFuncoesContext struct {
 func NewEmptyListaFuncoesContext() *ListaFuncoesContext {
 	var p = new(ListaFuncoesContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaFuncoes
+	p.RuleIndex = GrammarParserRULE_listaFuncoes
 	return p
 }
 
 func InitEmptyListaFuncoesContext(p *ListaFuncoesContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaFuncoes
+	p.RuleIndex = GrammarParserRULE_listaFuncoes
 }
 
 func (*ListaFuncoesContext) IsListaFuncoesContext() {}
@@ -509,7 +509,7 @@ func NewListaFuncoesContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_listaFuncoes
+	p.RuleIndex = GrammarParserRULE_listaFuncoes
 
 	return p
 }
@@ -557,20 +557,20 @@ func (s *ListaFuncoesContext) ToStringTree(ruleNames []string, recog antlr.Recog
 }
 
 func (s *ListaFuncoesContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterListaFuncoes(s)
 	}
 }
 
 func (s *ListaFuncoesContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitListaFuncoes(s)
 	}
 }
 
-func (p *MyGrammarParser) ListaFuncoes() (localctx IListaFuncoesContext) {
+func (p *GrammarParser) ListaFuncoes() (localctx IListaFuncoesContext) {
 	localctx = NewListaFuncoesContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 2, MyGrammarParserRULE_listaFuncoes)
+	p.EnterRule(localctx, 2, GrammarParserRULE_listaFuncoes)
 	p.SetState(102)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -578,7 +578,7 @@ func (p *MyGrammarParser) ListaFuncoes() (localctx IListaFuncoesContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserINT, MyGrammarParserFLOAT, MyGrammarParserCHAR, MyGrammarParserBOOLEAN, MyGrammarParserVOID:
+	case GrammarParserINT, GrammarParserFLOAT, GrammarParserCHAR, GrammarParserBOOLEAN, GrammarParserVOID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(98)
@@ -589,7 +589,7 @@ func (p *MyGrammarParser) ListaFuncoes() (localctx IListaFuncoesContext) {
 			p.ListaFuncoes()
 		}
 
-	case MyGrammarParserMAIN:
+	case GrammarParserMAIN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -637,13 +637,13 @@ type DecFuncaoContext struct {
 func NewEmptyDecFuncaoContext() *DecFuncaoContext {
 	var p = new(DecFuncaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_decFuncao
+	p.RuleIndex = GrammarParserRULE_decFuncao
 	return p
 }
 
 func InitEmptyDecFuncaoContext(p *DecFuncaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_decFuncao
+	p.RuleIndex = GrammarParserRULE_decFuncao
 }
 
 func (*DecFuncaoContext) IsDecFuncaoContext() {}
@@ -654,7 +654,7 @@ func NewDecFuncaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_decFuncao
+	p.RuleIndex = GrammarParserRULE_decFuncao
 
 	return p
 }
@@ -678,11 +678,11 @@ func (s *DecFuncaoContext) TipoRetorno() ITipoRetornoContext {
 }
 
 func (s *DecFuncaoContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *DecFuncaoContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *DecFuncaoContext) Parametros() IParametrosContext {
@@ -702,7 +702,7 @@ func (s *DecFuncaoContext) Parametros() IParametrosContext {
 }
 
 func (s *DecFuncaoContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *DecFuncaoContext) Bloco() IBlocoContext {
@@ -730,20 +730,20 @@ func (s *DecFuncaoContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 }
 
 func (s *DecFuncaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterDecFuncao(s)
 	}
 }
 
 func (s *DecFuncaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitDecFuncao(s)
 	}
 }
 
-func (p *MyGrammarParser) DecFuncao() (localctx IDecFuncaoContext) {
+func (p *GrammarParser) DecFuncao() (localctx IDecFuncaoContext) {
 	localctx = NewDecFuncaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 4, MyGrammarParserRULE_decFuncao)
+	p.EnterRule(localctx, 4, GrammarParserRULE_decFuncao)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(104)
@@ -751,7 +751,7 @@ func (p *MyGrammarParser) DecFuncao() (localctx IDecFuncaoContext) {
 	}
 	{
 		p.SetState(105)
-		p.Match(MyGrammarParserID)
+		p.Match(GrammarParserID)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -759,7 +759,7 @@ func (p *MyGrammarParser) DecFuncao() (localctx IDecFuncaoContext) {
 	}
 	{
 		p.SetState(106)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -771,7 +771,7 @@ func (p *MyGrammarParser) DecFuncao() (localctx IDecFuncaoContext) {
 	}
 	{
 		p.SetState(108)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -818,13 +818,13 @@ type TipoRetornoContext struct {
 func NewEmptyTipoRetornoContext() *TipoRetornoContext {
 	var p = new(TipoRetornoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_tipoRetorno
+	p.RuleIndex = GrammarParserRULE_tipoRetorno
 	return p
 }
 
 func InitEmptyTipoRetornoContext(p *TipoRetornoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_tipoRetorno
+	p.RuleIndex = GrammarParserRULE_tipoRetorno
 }
 
 func (*TipoRetornoContext) IsTipoRetornoContext() {}
@@ -835,7 +835,7 @@ func NewTipoRetornoContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_tipoRetorno
+	p.RuleIndex = GrammarParserRULE_tipoRetorno
 
 	return p
 }
@@ -859,7 +859,7 @@ func (s *TipoRetornoContext) Tipo() ITipoContext {
 }
 
 func (s *TipoRetornoContext) VOID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserVOID, 0)
+	return s.GetToken(GrammarParserVOID, 0)
 }
 
 func (s *TipoRetornoContext) GetRuleContext() antlr.RuleContext {
@@ -871,20 +871,20 @@ func (s *TipoRetornoContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 }
 
 func (s *TipoRetornoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterTipoRetorno(s)
 	}
 }
 
 func (s *TipoRetornoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitTipoRetorno(s)
 	}
 }
 
-func (p *MyGrammarParser) TipoRetorno() (localctx ITipoRetornoContext) {
+func (p *GrammarParser) TipoRetorno() (localctx ITipoRetornoContext) {
 	localctx = NewTipoRetornoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 6, MyGrammarParserRULE_tipoRetorno)
+	p.EnterRule(localctx, 6, GrammarParserRULE_tipoRetorno)
 	p.SetState(113)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -892,18 +892,18 @@ func (p *MyGrammarParser) TipoRetorno() (localctx ITipoRetornoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserINT, MyGrammarParserFLOAT, MyGrammarParserCHAR, MyGrammarParserBOOLEAN:
+	case GrammarParserINT, GrammarParserFLOAT, GrammarParserCHAR, GrammarParserBOOLEAN:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(111)
 			p.Tipo()
 		}
 
-	case MyGrammarParserVOID:
+	case GrammarParserVOID:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(112)
-			p.Match(MyGrammarParserVOID)
+			p.Match(GrammarParserVOID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -951,13 +951,13 @@ type TipoContext struct {
 func NewEmptyTipoContext() *TipoContext {
 	var p = new(TipoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_tipo
+	p.RuleIndex = GrammarParserRULE_tipo
 	return p
 }
 
 func InitEmptyTipoContext(p *TipoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_tipo
+	p.RuleIndex = GrammarParserRULE_tipo
 }
 
 func (*TipoContext) IsTipoContext() {}
@@ -968,7 +968,7 @@ func NewTipoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokin
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_tipo
+	p.RuleIndex = GrammarParserRULE_tipo
 
 	return p
 }
@@ -1016,20 +1016,20 @@ func (s *TipoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) s
 }
 
 func (s *TipoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterTipo(s)
 	}
 }
 
 func (s *TipoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitTipo(s)
 	}
 }
 
-func (p *MyGrammarParser) Tipo() (localctx ITipoContext) {
+func (p *GrammarParser) Tipo() (localctx ITipoContext) {
 	localctx = NewTipoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 8, MyGrammarParserRULE_tipo)
+	p.EnterRule(localctx, 8, GrammarParserRULE_tipo)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(115)
@@ -1078,13 +1078,13 @@ type TipoBaseContext struct {
 func NewEmptyTipoBaseContext() *TipoBaseContext {
 	var p = new(TipoBaseContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_tipoBase
+	p.RuleIndex = GrammarParserRULE_tipoBase
 	return p
 }
 
 func InitEmptyTipoBaseContext(p *TipoBaseContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_tipoBase
+	p.RuleIndex = GrammarParserRULE_tipoBase
 }
 
 func (*TipoBaseContext) IsTipoBaseContext() {}
@@ -1095,7 +1095,7 @@ func NewTipoBaseContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_tipoBase
+	p.RuleIndex = GrammarParserRULE_tipoBase
 
 	return p
 }
@@ -1103,19 +1103,19 @@ func NewTipoBaseContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 func (s *TipoBaseContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *TipoBaseContext) INT() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserINT, 0)
+	return s.GetToken(GrammarParserINT, 0)
 }
 
 func (s *TipoBaseContext) FLOAT() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserFLOAT, 0)
+	return s.GetToken(GrammarParserFLOAT, 0)
 }
 
 func (s *TipoBaseContext) CHAR() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserCHAR, 0)
+	return s.GetToken(GrammarParserCHAR, 0)
 }
 
 func (s *TipoBaseContext) BOOLEAN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserBOOLEAN, 0)
+	return s.GetToken(GrammarParserBOOLEAN, 0)
 }
 
 func (s *TipoBaseContext) GetRuleContext() antlr.RuleContext {
@@ -1127,20 +1127,20 @@ func (s *TipoBaseContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 }
 
 func (s *TipoBaseContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterTipoBase(s)
 	}
 }
 
 func (s *TipoBaseContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitTipoBase(s)
 	}
 }
 
-func (p *MyGrammarParser) TipoBase() (localctx ITipoBaseContext) {
+func (p *GrammarParser) TipoBase() (localctx ITipoBaseContext) {
 	localctx = NewTipoBaseContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 10, MyGrammarParserRULE_tipoBase)
+	p.EnterRule(localctx, 10, GrammarParserRULE_tipoBase)
 	var _la int
 
 	p.EnterOuterAlt(localctx, 1)
@@ -1192,13 +1192,13 @@ type DimensaoContext struct {
 func NewEmptyDimensaoContext() *DimensaoContext {
 	var p = new(DimensaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_dimensao
+	p.RuleIndex = GrammarParserRULE_dimensao
 	return p
 }
 
 func InitEmptyDimensaoContext(p *DimensaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_dimensao
+	p.RuleIndex = GrammarParserRULE_dimensao
 }
 
 func (*DimensaoContext) IsDimensaoContext() {}
@@ -1209,7 +1209,7 @@ func NewDimensaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_dimensao
+	p.RuleIndex = GrammarParserRULE_dimensao
 
 	return p
 }
@@ -1217,7 +1217,7 @@ func NewDimensaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 func (s *DimensaoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *DimensaoContext) NUM_INT() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserNUM_INT, 0)
+	return s.GetToken(GrammarParserNUM_INT, 0)
 }
 
 func (s *DimensaoContext) Dimensao() IDimensaoContext {
@@ -1245,20 +1245,20 @@ func (s *DimensaoContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 }
 
 func (s *DimensaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterDimensao(s)
 	}
 }
 
 func (s *DimensaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitDimensao(s)
 	}
 }
 
-func (p *MyGrammarParser) Dimensao() (localctx IDimensaoContext) {
+func (p *GrammarParser) Dimensao() (localctx IDimensaoContext) {
 	localctx = NewDimensaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 12, MyGrammarParserRULE_dimensao)
+	p.EnterRule(localctx, 12, GrammarParserRULE_dimensao)
 	p.SetState(125)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -1266,11 +1266,11 @@ func (p *MyGrammarParser) Dimensao() (localctx IDimensaoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__0:
+	case GrammarParserT__0:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(120)
-			p.Match(MyGrammarParserT__0)
+			p.Match(GrammarParserT__0)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1278,7 +1278,7 @@ func (p *MyGrammarParser) Dimensao() (localctx IDimensaoContext) {
 		}
 		{
 			p.SetState(121)
-			p.Match(MyGrammarParserNUM_INT)
+			p.Match(GrammarParserNUM_INT)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1286,7 +1286,7 @@ func (p *MyGrammarParser) Dimensao() (localctx IDimensaoContext) {
 		}
 		{
 			p.SetState(122)
-			p.Match(MyGrammarParserT__1)
+			p.Match(GrammarParserT__1)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1297,7 +1297,7 @@ func (p *MyGrammarParser) Dimensao() (localctx IDimensaoContext) {
 			p.Dimensao()
 		}
 
-	case MyGrammarParserID:
+	case GrammarParserID:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -1342,13 +1342,13 @@ type ParametrosContext struct {
 func NewEmptyParametrosContext() *ParametrosContext {
 	var p = new(ParametrosContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_parametros
+	p.RuleIndex = GrammarParserRULE_parametros
 	return p
 }
 
 func InitEmptyParametrosContext(p *ParametrosContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_parametros
+	p.RuleIndex = GrammarParserRULE_parametros
 }
 
 func (*ParametrosContext) IsParametrosContext() {}
@@ -1359,7 +1359,7 @@ func NewParametrosContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_parametros
+	p.RuleIndex = GrammarParserRULE_parametros
 
 	return p
 }
@@ -1383,7 +1383,7 @@ func (s *ParametrosContext) Tipo() ITipoContext {
 }
 
 func (s *ParametrosContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *ParametrosContext) ListaParametros() IListaParametrosContext {
@@ -1411,20 +1411,20 @@ func (s *ParametrosContext) ToStringTree(ruleNames []string, recog antlr.Recogni
 }
 
 func (s *ParametrosContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterParametros(s)
 	}
 }
 
 func (s *ParametrosContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitParametros(s)
 	}
 }
 
-func (p *MyGrammarParser) Parametros() (localctx IParametrosContext) {
+func (p *GrammarParser) Parametros() (localctx IParametrosContext) {
 	localctx = NewParametrosContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 14, MyGrammarParserRULE_parametros)
+	p.EnterRule(localctx, 14, GrammarParserRULE_parametros)
 	p.SetState(132)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -1432,7 +1432,7 @@ func (p *MyGrammarParser) Parametros() (localctx IParametrosContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserINT, MyGrammarParserFLOAT, MyGrammarParserCHAR, MyGrammarParserBOOLEAN:
+	case GrammarParserINT, GrammarParserFLOAT, GrammarParserCHAR, GrammarParserBOOLEAN:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(127)
@@ -1440,7 +1440,7 @@ func (p *MyGrammarParser) Parametros() (localctx IParametrosContext) {
 		}
 		{
 			p.SetState(128)
-			p.Match(MyGrammarParserID)
+			p.Match(GrammarParserID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1451,7 +1451,7 @@ func (p *MyGrammarParser) Parametros() (localctx IParametrosContext) {
 			p.ListaParametros()
 		}
 
-	case MyGrammarParserRPAREN:
+	case GrammarParserRPAREN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -1496,13 +1496,13 @@ type ListaParametrosContext struct {
 func NewEmptyListaParametrosContext() *ListaParametrosContext {
 	var p = new(ListaParametrosContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaParametros
+	p.RuleIndex = GrammarParserRULE_listaParametros
 	return p
 }
 
 func InitEmptyListaParametrosContext(p *ListaParametrosContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaParametros
+	p.RuleIndex = GrammarParserRULE_listaParametros
 }
 
 func (*ListaParametrosContext) IsListaParametrosContext() {}
@@ -1513,7 +1513,7 @@ func NewListaParametrosContext(parser antlr.Parser, parent antlr.ParserRuleConte
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_listaParametros
+	p.RuleIndex = GrammarParserRULE_listaParametros
 
 	return p
 }
@@ -1537,7 +1537,7 @@ func (s *ListaParametrosContext) Tipo() ITipoContext {
 }
 
 func (s *ListaParametrosContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *ListaParametrosContext) ListaParametros() IListaParametrosContext {
@@ -1565,20 +1565,20 @@ func (s *ListaParametrosContext) ToStringTree(ruleNames []string, recog antlr.Re
 }
 
 func (s *ListaParametrosContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterListaParametros(s)
 	}
 }
 
 func (s *ListaParametrosContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitListaParametros(s)
 	}
 }
 
-func (p *MyGrammarParser) ListaParametros() (localctx IListaParametrosContext) {
+func (p *GrammarParser) ListaParametros() (localctx IListaParametrosContext) {
 	localctx = NewListaParametrosContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 16, MyGrammarParserRULE_listaParametros)
+	p.EnterRule(localctx, 16, GrammarParserRULE_listaParametros)
 	p.SetState(140)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -1586,11 +1586,11 @@ func (p *MyGrammarParser) ListaParametros() (localctx IListaParametrosContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__2:
+	case GrammarParserT__2:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(134)
-			p.Match(MyGrammarParserT__2)
+			p.Match(GrammarParserT__2)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1602,7 +1602,7 @@ func (p *MyGrammarParser) ListaParametros() (localctx IListaParametrosContext) {
 		}
 		{
 			p.SetState(136)
-			p.Match(MyGrammarParserID)
+			p.Match(GrammarParserID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1613,7 +1613,7 @@ func (p *MyGrammarParser) ListaParametros() (localctx IListaParametrosContext) {
 			p.ListaParametros()
 		}
 
-	case MyGrammarParserRPAREN:
+	case GrammarParserRPAREN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -1659,13 +1659,13 @@ type PrincipalContext struct {
 func NewEmptyPrincipalContext() *PrincipalContext {
 	var p = new(PrincipalContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_principal
+	p.RuleIndex = GrammarParserRULE_principal
 	return p
 }
 
 func InitEmptyPrincipalContext(p *PrincipalContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_principal
+	p.RuleIndex = GrammarParserRULE_principal
 }
 
 func (*PrincipalContext) IsPrincipalContext() {}
@@ -1676,7 +1676,7 @@ func NewPrincipalContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_principal
+	p.RuleIndex = GrammarParserRULE_principal
 
 	return p
 }
@@ -1684,15 +1684,15 @@ func NewPrincipalContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 func (s *PrincipalContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *PrincipalContext) MAIN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserMAIN, 0)
+	return s.GetToken(GrammarParserMAIN, 0)
 }
 
 func (s *PrincipalContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *PrincipalContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *PrincipalContext) Bloco() IBlocoContext {
@@ -1720,24 +1720,24 @@ func (s *PrincipalContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 }
 
 func (s *PrincipalContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterPrincipal(s)
 	}
 }
 
 func (s *PrincipalContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitPrincipal(s)
 	}
 }
 
-func (p *MyGrammarParser) Principal() (localctx IPrincipalContext) {
+func (p *GrammarParser) Principal() (localctx IPrincipalContext) {
 	localctx = NewPrincipalContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 18, MyGrammarParserRULE_principal)
+	p.EnterRule(localctx, 18, GrammarParserRULE_principal)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(142)
-		p.Match(MyGrammarParserMAIN)
+		p.Match(GrammarParserMAIN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1745,7 +1745,7 @@ func (p *MyGrammarParser) Principal() (localctx IPrincipalContext) {
 	}
 	{
 		p.SetState(143)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1753,7 +1753,7 @@ func (p *MyGrammarParser) Principal() (localctx IPrincipalContext) {
 	}
 	{
 		p.SetState(144)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1802,13 +1802,13 @@ type BlocoContext struct {
 func NewEmptyBlocoContext() *BlocoContext {
 	var p = new(BlocoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_bloco
+	p.RuleIndex = GrammarParserRULE_bloco
 	return p
 }
 
 func InitEmptyBlocoContext(p *BlocoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_bloco
+	p.RuleIndex = GrammarParserRULE_bloco
 }
 
 func (*BlocoContext) IsBlocoContext() {}
@@ -1819,7 +1819,7 @@ func NewBlocoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_bloco
+	p.RuleIndex = GrammarParserRULE_bloco
 
 	return p
 }
@@ -1827,7 +1827,7 @@ func NewBlocoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 func (s *BlocoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *BlocoContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLBRACE, 0)
+	return s.GetToken(GrammarParserLBRACE, 0)
 }
 
 func (s *BlocoContext) ListaVariaveis() IListaVariaveisContext {
@@ -1863,7 +1863,7 @@ func (s *BlocoContext) Comandos() IComandosContext {
 }
 
 func (s *BlocoContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRBRACE, 0)
+	return s.GetToken(GrammarParserRBRACE, 0)
 }
 
 func (s *BlocoContext) GetRuleContext() antlr.RuleContext {
@@ -1875,24 +1875,24 @@ func (s *BlocoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) 
 }
 
 func (s *BlocoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterBloco(s)
 	}
 }
 
 func (s *BlocoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitBloco(s)
 	}
 }
 
-func (p *MyGrammarParser) Bloco() (localctx IBlocoContext) {
+func (p *GrammarParser) Bloco() (localctx IBlocoContext) {
 	localctx = NewBlocoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 20, MyGrammarParserRULE_bloco)
+	p.EnterRule(localctx, 20, GrammarParserRULE_bloco)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(147)
-		p.Match(MyGrammarParserLBRACE)
+		p.Match(GrammarParserLBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1908,7 +1908,7 @@ func (p *MyGrammarParser) Bloco() (localctx IBlocoContext) {
 	}
 	{
 		p.SetState(150)
-		p.Match(MyGrammarParserRBRACE)
+		p.Match(GrammarParserRBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1954,13 +1954,13 @@ type ListaVariaveisContext struct {
 func NewEmptyListaVariaveisContext() *ListaVariaveisContext {
 	var p = new(ListaVariaveisContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaVariaveis
+	p.RuleIndex = GrammarParserRULE_listaVariaveis
 	return p
 }
 
 func InitEmptyListaVariaveisContext(p *ListaVariaveisContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaVariaveis
+	p.RuleIndex = GrammarParserRULE_listaVariaveis
 }
 
 func (*ListaVariaveisContext) IsListaVariaveisContext() {}
@@ -1971,7 +1971,7 @@ func NewListaVariaveisContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_listaVariaveis
+	p.RuleIndex = GrammarParserRULE_listaVariaveis
 
 	return p
 }
@@ -1995,7 +1995,7 @@ func (s *ListaVariaveisContext) Tipo() ITipoContext {
 }
 
 func (s *ListaVariaveisContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *ListaVariaveisContext) ListaId() IListaIdContext {
@@ -2015,7 +2015,7 @@ func (s *ListaVariaveisContext) ListaId() IListaIdContext {
 }
 
 func (s *ListaVariaveisContext) SEMI() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserSEMI, 0)
+	return s.GetToken(GrammarParserSEMI, 0)
 }
 
 func (s *ListaVariaveisContext) ListaVariaveis() IListaVariaveisContext {
@@ -2043,20 +2043,20 @@ func (s *ListaVariaveisContext) ToStringTree(ruleNames []string, recog antlr.Rec
 }
 
 func (s *ListaVariaveisContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterListaVariaveis(s)
 	}
 }
 
 func (s *ListaVariaveisContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitListaVariaveis(s)
 	}
 }
 
-func (p *MyGrammarParser) ListaVariaveis() (localctx IListaVariaveisContext) {
+func (p *GrammarParser) ListaVariaveis() (localctx IListaVariaveisContext) {
 	localctx = NewListaVariaveisContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 22, MyGrammarParserRULE_listaVariaveis)
+	p.EnterRule(localctx, 22, GrammarParserRULE_listaVariaveis)
 	p.SetState(159)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -2064,7 +2064,7 @@ func (p *MyGrammarParser) ListaVariaveis() (localctx IListaVariaveisContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserINT, MyGrammarParserFLOAT, MyGrammarParserCHAR, MyGrammarParserBOOLEAN:
+	case GrammarParserINT, GrammarParserFLOAT, GrammarParserCHAR, GrammarParserBOOLEAN:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(152)
@@ -2072,7 +2072,7 @@ func (p *MyGrammarParser) ListaVariaveis() (localctx IListaVariaveisContext) {
 		}
 		{
 			p.SetState(153)
-			p.Match(MyGrammarParserID)
+			p.Match(GrammarParserID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2084,7 +2084,7 @@ func (p *MyGrammarParser) ListaVariaveis() (localctx IListaVariaveisContext) {
 		}
 		{
 			p.SetState(155)
-			p.Match(MyGrammarParserSEMI)
+			p.Match(GrammarParserSEMI)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2095,7 +2095,7 @@ func (p *MyGrammarParser) ListaVariaveis() (localctx IListaVariaveisContext) {
 			p.ListaVariaveis()
 		}
 
-	case MyGrammarParserT__3, MyGrammarParserRETURN, MyGrammarParserIF, MyGrammarParserWHILE, MyGrammarParserSCANF, MyGrammarParserPRINTLN, MyGrammarParserRBRACE, MyGrammarParserID:
+	case GrammarParserT__3, GrammarParserRETURN, GrammarParserIF, GrammarParserWHILE, GrammarParserSCANF, GrammarParserPRINTLN, GrammarParserRBRACE, GrammarParserID:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -2139,13 +2139,13 @@ type ListaIdContext struct {
 func NewEmptyListaIdContext() *ListaIdContext {
 	var p = new(ListaIdContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaId
+	p.RuleIndex = GrammarParserRULE_listaId
 	return p
 }
 
 func InitEmptyListaIdContext(p *ListaIdContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_listaId
+	p.RuleIndex = GrammarParserRULE_listaId
 }
 
 func (*ListaIdContext) IsListaIdContext() {}
@@ -2156,7 +2156,7 @@ func NewListaIdContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_listaId
+	p.RuleIndex = GrammarParserRULE_listaId
 
 	return p
 }
@@ -2164,7 +2164,7 @@ func NewListaIdContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 func (s *ListaIdContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *ListaIdContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *ListaIdContext) ListaId() IListaIdContext {
@@ -2192,20 +2192,20 @@ func (s *ListaIdContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *ListaIdContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterListaId(s)
 	}
 }
 
 func (s *ListaIdContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitListaId(s)
 	}
 }
 
-func (p *MyGrammarParser) ListaId() (localctx IListaIdContext) {
+func (p *GrammarParser) ListaId() (localctx IListaIdContext) {
 	localctx = NewListaIdContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 24, MyGrammarParserRULE_listaId)
+	p.EnterRule(localctx, 24, GrammarParserRULE_listaId)
 	p.SetState(165)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -2213,11 +2213,11 @@ func (p *MyGrammarParser) ListaId() (localctx IListaIdContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__2:
+	case GrammarParserT__2:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(161)
-			p.Match(MyGrammarParserT__2)
+			p.Match(GrammarParserT__2)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2225,7 +2225,7 @@ func (p *MyGrammarParser) ListaId() (localctx IListaIdContext) {
 		}
 		{
 			p.SetState(162)
-			p.Match(MyGrammarParserID)
+			p.Match(GrammarParserID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2236,7 +2236,7 @@ func (p *MyGrammarParser) ListaId() (localctx IListaIdContext) {
 			p.ListaId()
 		}
 
-	case MyGrammarParserSEMI:
+	case GrammarParserSEMI:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -2280,13 +2280,13 @@ type ComandosContext struct {
 func NewEmptyComandosContext() *ComandosContext {
 	var p = new(ComandosContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_comandos
+	p.RuleIndex = GrammarParserRULE_comandos
 	return p
 }
 
 func InitEmptyComandosContext(p *ComandosContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_comandos
+	p.RuleIndex = GrammarParserRULE_comandos
 }
 
 func (*ComandosContext) IsComandosContext() {}
@@ -2297,7 +2297,7 @@ func NewComandosContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_comandos
+	p.RuleIndex = GrammarParserRULE_comandos
 
 	return p
 }
@@ -2345,20 +2345,20 @@ func (s *ComandosContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 }
 
 func (s *ComandosContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterComandos(s)
 	}
 }
 
 func (s *ComandosContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitComandos(s)
 	}
 }
 
-func (p *MyGrammarParser) Comandos() (localctx IComandosContext) {
+func (p *GrammarParser) Comandos() (localctx IComandosContext) {
 	localctx = NewComandosContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 26, MyGrammarParserRULE_comandos)
+	p.EnterRule(localctx, 26, GrammarParserRULE_comandos)
 	p.SetState(171)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -2366,7 +2366,7 @@ func (p *MyGrammarParser) Comandos() (localctx IComandosContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__3, MyGrammarParserRETURN, MyGrammarParserIF, MyGrammarParserWHILE, MyGrammarParserSCANF, MyGrammarParserPRINTLN, MyGrammarParserID:
+	case GrammarParserT__3, GrammarParserRETURN, GrammarParserIF, GrammarParserWHILE, GrammarParserSCANF, GrammarParserPRINTLN, GrammarParserID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(167)
@@ -2377,7 +2377,7 @@ func (p *MyGrammarParser) Comandos() (localctx IComandosContext) {
 			p.Comandos()
 		}
 
-	case MyGrammarParserRBRACE:
+	case GrammarParserRBRACE:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -2426,13 +2426,13 @@ type ComandoContext struct {
 func NewEmptyComandoContext() *ComandoContext {
 	var p = new(ComandoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_comando
+	p.RuleIndex = GrammarParserRULE_comando
 	return p
 }
 
 func InitEmptyComandoContext(p *ComandoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_comando
+	p.RuleIndex = GrammarParserRULE_comando
 }
 
 func (*ComandoContext) IsComandoContext() {}
@@ -2443,7 +2443,7 @@ func NewComandoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_comando
+	p.RuleIndex = GrammarParserRULE_comando
 
 	return p
 }
@@ -2571,20 +2571,20 @@ func (s *ComandoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *ComandoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterComando(s)
 	}
 }
 
 func (s *ComandoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitComando(s)
 	}
 }
 
-func (p *MyGrammarParser) Comando() (localctx IComandoContext) {
+func (p *GrammarParser) Comando() (localctx IComandoContext) {
 	localctx = NewComandoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 28, MyGrammarParserRULE_comando)
+	p.EnterRule(localctx, 28, GrammarParserRULE_comando)
 	p.SetState(180)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -2592,49 +2592,49 @@ func (p *MyGrammarParser) Comando() (localctx IComandoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserSCANF:
+	case GrammarParserSCANF:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(173)
 			p.Leitura()
 		}
 
-	case MyGrammarParserPRINTLN:
+	case GrammarParserPRINTLN:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(174)
 			p.Escrita()
 		}
 
-	case MyGrammarParserID:
+	case GrammarParserID:
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(175)
 			p.Atribuicao()
 		}
 
-	case MyGrammarParserT__3:
+	case GrammarParserT__3:
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(176)
 			p.Funcao()
 		}
 
-	case MyGrammarParserIF:
+	case GrammarParserIF:
 		p.EnterOuterAlt(localctx, 5)
 		{
 			p.SetState(177)
 			p.Selecao()
 		}
 
-	case MyGrammarParserWHILE:
+	case GrammarParserWHILE:
 		p.EnterOuterAlt(localctx, 6)
 		{
 			p.SetState(178)
 			p.Enquanto()
 		}
 
-	case MyGrammarParserRETURN:
+	case GrammarParserRETURN:
 		p.EnterOuterAlt(localctx, 7)
 		{
 			p.SetState(179)
@@ -2686,13 +2686,13 @@ type LeituraContext struct {
 func NewEmptyLeituraContext() *LeituraContext {
 	var p = new(LeituraContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_leitura
+	p.RuleIndex = GrammarParserRULE_leitura
 	return p
 }
 
 func InitEmptyLeituraContext(p *LeituraContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_leitura
+	p.RuleIndex = GrammarParserRULE_leitura
 }
 
 func (*LeituraContext) IsLeituraContext() {}
@@ -2703,7 +2703,7 @@ func NewLeituraContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_leitura
+	p.RuleIndex = GrammarParserRULE_leitura
 
 	return p
 }
@@ -2711,11 +2711,11 @@ func NewLeituraContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 func (s *LeituraContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *LeituraContext) SCANF() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserSCANF, 0)
+	return s.GetToken(GrammarParserSCANF, 0)
 }
 
 func (s *LeituraContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *LeituraContext) TermoLeitura() ITermoLeituraContext {
@@ -2751,11 +2751,11 @@ func (s *LeituraContext) NovoTermoLeitura() INovoTermoLeituraContext {
 }
 
 func (s *LeituraContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *LeituraContext) SEMI() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserSEMI, 0)
+	return s.GetToken(GrammarParserSEMI, 0)
 }
 
 func (s *LeituraContext) GetRuleContext() antlr.RuleContext {
@@ -2767,24 +2767,24 @@ func (s *LeituraContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *LeituraContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterLeitura(s)
 	}
 }
 
 func (s *LeituraContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitLeitura(s)
 	}
 }
 
-func (p *MyGrammarParser) Leitura() (localctx ILeituraContext) {
+func (p *GrammarParser) Leitura() (localctx ILeituraContext) {
 	localctx = NewLeituraContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 30, MyGrammarParserRULE_leitura)
+	p.EnterRule(localctx, 30, GrammarParserRULE_leitura)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(182)
-		p.Match(MyGrammarParserSCANF)
+		p.Match(GrammarParserSCANF)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2792,7 +2792,7 @@ func (p *MyGrammarParser) Leitura() (localctx ILeituraContext) {
 	}
 	{
 		p.SetState(183)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2808,7 +2808,7 @@ func (p *MyGrammarParser) Leitura() (localctx ILeituraContext) {
 	}
 	{
 		p.SetState(186)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2816,7 +2816,7 @@ func (p *MyGrammarParser) Leitura() (localctx ILeituraContext) {
 	}
 	{
 		p.SetState(187)
-		p.Match(MyGrammarParserSEMI)
+		p.Match(GrammarParserSEMI)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2859,13 +2859,13 @@ type TermoLeituraContext struct {
 func NewEmptyTermoLeituraContext() *TermoLeituraContext {
 	var p = new(TermoLeituraContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_termoLeitura
+	p.RuleIndex = GrammarParserRULE_termoLeitura
 	return p
 }
 
 func InitEmptyTermoLeituraContext(p *TermoLeituraContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_termoLeitura
+	p.RuleIndex = GrammarParserRULE_termoLeitura
 }
 
 func (*TermoLeituraContext) IsTermoLeituraContext() {}
@@ -2876,7 +2876,7 @@ func NewTermoLeituraContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_termoLeitura
+	p.RuleIndex = GrammarParserRULE_termoLeitura
 
 	return p
 }
@@ -2884,7 +2884,7 @@ func NewTermoLeituraContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 func (s *TermoLeituraContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *TermoLeituraContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *TermoLeituraContext) Dimensao2() IDimensao2Context {
@@ -2912,24 +2912,24 @@ func (s *TermoLeituraContext) ToStringTree(ruleNames []string, recog antlr.Recog
 }
 
 func (s *TermoLeituraContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterTermoLeitura(s)
 	}
 }
 
 func (s *TermoLeituraContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitTermoLeitura(s)
 	}
 }
 
-func (p *MyGrammarParser) TermoLeitura() (localctx ITermoLeituraContext) {
+func (p *GrammarParser) TermoLeitura() (localctx ITermoLeituraContext) {
 	localctx = NewTermoLeituraContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 32, MyGrammarParserRULE_termoLeitura)
+	p.EnterRule(localctx, 32, GrammarParserRULE_termoLeitura)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(189)
-		p.Match(MyGrammarParserID)
+		p.Match(GrammarParserID)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2976,13 +2976,13 @@ type NovoTermoLeituraContext struct {
 func NewEmptyNovoTermoLeituraContext() *NovoTermoLeituraContext {
 	var p = new(NovoTermoLeituraContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_novoTermoLeitura
+	p.RuleIndex = GrammarParserRULE_novoTermoLeitura
 	return p
 }
 
 func InitEmptyNovoTermoLeituraContext(p *NovoTermoLeituraContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_novoTermoLeitura
+	p.RuleIndex = GrammarParserRULE_novoTermoLeitura
 }
 
 func (*NovoTermoLeituraContext) IsNovoTermoLeituraContext() {}
@@ -2993,7 +2993,7 @@ func NewNovoTermoLeituraContext(parser antlr.Parser, parent antlr.ParserRuleCont
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_novoTermoLeitura
+	p.RuleIndex = GrammarParserRULE_novoTermoLeitura
 
 	return p
 }
@@ -3041,20 +3041,20 @@ func (s *NovoTermoLeituraContext) ToStringTree(ruleNames []string, recog antlr.R
 }
 
 func (s *NovoTermoLeituraContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterNovoTermoLeitura(s)
 	}
 }
 
 func (s *NovoTermoLeituraContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitNovoTermoLeitura(s)
 	}
 }
 
-func (p *MyGrammarParser) NovoTermoLeitura() (localctx INovoTermoLeituraContext) {
+func (p *GrammarParser) NovoTermoLeitura() (localctx INovoTermoLeituraContext) {
 	localctx = NewNovoTermoLeituraContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 34, MyGrammarParserRULE_novoTermoLeitura)
+	p.EnterRule(localctx, 34, GrammarParserRULE_novoTermoLeitura)
 	p.SetState(197)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -3062,11 +3062,11 @@ func (p *MyGrammarParser) NovoTermoLeitura() (localctx INovoTermoLeituraContext)
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__2:
+	case GrammarParserT__2:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(192)
-			p.Match(MyGrammarParserT__2)
+			p.Match(GrammarParserT__2)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3081,7 +3081,7 @@ func (p *MyGrammarParser) NovoTermoLeitura() (localctx INovoTermoLeituraContext)
 			p.NovoTermoLeitura()
 		}
 
-	case MyGrammarParserRPAREN:
+	case GrammarParserRPAREN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -3125,13 +3125,13 @@ type Dimensao2Context struct {
 func NewEmptyDimensao2Context() *Dimensao2Context {
 	var p = new(Dimensao2Context)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_dimensao2
+	p.RuleIndex = GrammarParserRULE_dimensao2
 	return p
 }
 
 func InitEmptyDimensao2Context(p *Dimensao2Context) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_dimensao2
+	p.RuleIndex = GrammarParserRULE_dimensao2
 }
 
 func (*Dimensao2Context) IsDimensao2Context() {}
@@ -3142,7 +3142,7 @@ func NewDimensao2Context(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_dimensao2
+	p.RuleIndex = GrammarParserRULE_dimensao2
 
 	return p
 }
@@ -3190,20 +3190,20 @@ func (s *Dimensao2Context) ToStringTree(ruleNames []string, recog antlr.Recogniz
 }
 
 func (s *Dimensao2Context) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterDimensao2(s)
 	}
 }
 
 func (s *Dimensao2Context) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitDimensao2(s)
 	}
 }
 
-func (p *MyGrammarParser) Dimensao2() (localctx IDimensao2Context) {
+func (p *GrammarParser) Dimensao2() (localctx IDimensao2Context) {
 	localctx = NewDimensao2Context(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 36, MyGrammarParserRULE_dimensao2)
+	p.EnterRule(localctx, 36, GrammarParserRULE_dimensao2)
 	p.SetState(205)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -3211,11 +3211,11 @@ func (p *MyGrammarParser) Dimensao2() (localctx IDimensao2Context) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__0:
+	case GrammarParserT__0:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(199)
-			p.Match(MyGrammarParserT__0)
+			p.Match(GrammarParserT__0)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3227,7 +3227,7 @@ func (p *MyGrammarParser) Dimensao2() (localctx IDimensao2Context) {
 		}
 		{
 			p.SetState(201)
-			p.Match(MyGrammarParserT__1)
+			p.Match(GrammarParserT__1)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3238,7 +3238,7 @@ func (p *MyGrammarParser) Dimensao2() (localctx IDimensao2Context) {
 			p.Dimensao2()
 		}
 
-	case MyGrammarParserT__1, MyGrammarParserT__2, MyGrammarParserT__4, MyGrammarParserT__5, MyGrammarParserCOMP, MyGrammarParserRPAREN, MyGrammarParserSEMI, MyGrammarParserPLUS, MyGrammarParserMINUS, MyGrammarParserMUL, MyGrammarParserDIV, MyGrammarParserMOD:
+	case GrammarParserT__1, GrammarParserT__2, GrammarParserT__4, GrammarParserT__5, GrammarParserCOMP, GrammarParserRPAREN, GrammarParserSEMI, GrammarParserPLUS, GrammarParserMINUS, GrammarParserMUL, GrammarParserDIV, GrammarParserMOD:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -3286,13 +3286,13 @@ type EscritaContext struct {
 func NewEmptyEscritaContext() *EscritaContext {
 	var p = new(EscritaContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_escrita
+	p.RuleIndex = GrammarParserRULE_escrita
 	return p
 }
 
 func InitEmptyEscritaContext(p *EscritaContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_escrita
+	p.RuleIndex = GrammarParserRULE_escrita
 }
 
 func (*EscritaContext) IsEscritaContext() {}
@@ -3303,7 +3303,7 @@ func NewEscritaContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_escrita
+	p.RuleIndex = GrammarParserRULE_escrita
 
 	return p
 }
@@ -3311,11 +3311,11 @@ func NewEscritaContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 func (s *EscritaContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *EscritaContext) PRINTLN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserPRINTLN, 0)
+	return s.GetToken(GrammarParserPRINTLN, 0)
 }
 
 func (s *EscritaContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *EscritaContext) TermoEscrita() ITermoEscritaContext {
@@ -3351,11 +3351,11 @@ func (s *EscritaContext) NovoTermoEscrita() INovoTermoEscritaContext {
 }
 
 func (s *EscritaContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *EscritaContext) SEMI() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserSEMI, 0)
+	return s.GetToken(GrammarParserSEMI, 0)
 }
 
 func (s *EscritaContext) GetRuleContext() antlr.RuleContext {
@@ -3367,24 +3367,24 @@ func (s *EscritaContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *EscritaContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterEscrita(s)
 	}
 }
 
 func (s *EscritaContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitEscrita(s)
 	}
 }
 
-func (p *MyGrammarParser) Escrita() (localctx IEscritaContext) {
+func (p *GrammarParser) Escrita() (localctx IEscritaContext) {
 	localctx = NewEscritaContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 38, MyGrammarParserRULE_escrita)
+	p.EnterRule(localctx, 38, GrammarParserRULE_escrita)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(207)
-		p.Match(MyGrammarParserPRINTLN)
+		p.Match(GrammarParserPRINTLN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3392,7 +3392,7 @@ func (p *MyGrammarParser) Escrita() (localctx IEscritaContext) {
 	}
 	{
 		p.SetState(208)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3408,7 +3408,7 @@ func (p *MyGrammarParser) Escrita() (localctx IEscritaContext) {
 	}
 	{
 		p.SetState(211)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3416,7 +3416,7 @@ func (p *MyGrammarParser) Escrita() (localctx IEscritaContext) {
 	}
 	{
 		p.SetState(212)
-		p.Match(MyGrammarParserSEMI)
+		p.Match(GrammarParserSEMI)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3461,13 +3461,13 @@ type TermoEscritaContext struct {
 func NewEmptyTermoEscritaContext() *TermoEscritaContext {
 	var p = new(TermoEscritaContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_termoEscrita
+	p.RuleIndex = GrammarParserRULE_termoEscrita
 	return p
 }
 
 func InitEmptyTermoEscritaContext(p *TermoEscritaContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_termoEscrita
+	p.RuleIndex = GrammarParserRULE_termoEscrita
 }
 
 func (*TermoEscritaContext) IsTermoEscritaContext() {}
@@ -3478,7 +3478,7 @@ func NewTermoEscritaContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_termoEscrita
+	p.RuleIndex = GrammarParserRULE_termoEscrita
 
 	return p
 }
@@ -3486,7 +3486,7 @@ func NewTermoEscritaContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 func (s *TermoEscritaContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *TermoEscritaContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *TermoEscritaContext) Dimensao2() IDimensao2Context {
@@ -3506,11 +3506,11 @@ func (s *TermoEscritaContext) Dimensao2() IDimensao2Context {
 }
 
 func (s *TermoEscritaContext) CONSTANTE() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserCONSTANTE, 0)
+	return s.GetToken(GrammarParserCONSTANTE, 0)
 }
 
 func (s *TermoEscritaContext) TEXTO() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserTEXTO, 0)
+	return s.GetToken(GrammarParserTEXTO, 0)
 }
 
 func (s *TermoEscritaContext) GetRuleContext() antlr.RuleContext {
@@ -3522,20 +3522,20 @@ func (s *TermoEscritaContext) ToStringTree(ruleNames []string, recog antlr.Recog
 }
 
 func (s *TermoEscritaContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterTermoEscrita(s)
 	}
 }
 
 func (s *TermoEscritaContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitTermoEscrita(s)
 	}
 }
 
-func (p *MyGrammarParser) TermoEscrita() (localctx ITermoEscritaContext) {
+func (p *GrammarParser) TermoEscrita() (localctx ITermoEscritaContext) {
 	localctx = NewTermoEscritaContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 40, MyGrammarParserRULE_termoEscrita)
+	p.EnterRule(localctx, 40, GrammarParserRULE_termoEscrita)
 	p.SetState(218)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -3543,11 +3543,11 @@ func (p *MyGrammarParser) TermoEscrita() (localctx ITermoEscritaContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserID:
+	case GrammarParserID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(214)
-			p.Match(MyGrammarParserID)
+			p.Match(GrammarParserID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3558,22 +3558,22 @@ func (p *MyGrammarParser) TermoEscrita() (localctx ITermoEscritaContext) {
 			p.Dimensao2()
 		}
 
-	case MyGrammarParserCONSTANTE:
+	case GrammarParserCONSTANTE:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(216)
-			p.Match(MyGrammarParserCONSTANTE)
+			p.Match(GrammarParserCONSTANTE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case MyGrammarParserTEXTO:
+	case GrammarParserTEXTO:
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(217)
-			p.Match(MyGrammarParserTEXTO)
+			p.Match(GrammarParserTEXTO)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3621,13 +3621,13 @@ type NovoTermoEscritaContext struct {
 func NewEmptyNovoTermoEscritaContext() *NovoTermoEscritaContext {
 	var p = new(NovoTermoEscritaContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_novoTermoEscrita
+	p.RuleIndex = GrammarParserRULE_novoTermoEscrita
 	return p
 }
 
 func InitEmptyNovoTermoEscritaContext(p *NovoTermoEscritaContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_novoTermoEscrita
+	p.RuleIndex = GrammarParserRULE_novoTermoEscrita
 }
 
 func (*NovoTermoEscritaContext) IsNovoTermoEscritaContext() {}
@@ -3638,7 +3638,7 @@ func NewNovoTermoEscritaContext(parser antlr.Parser, parent antlr.ParserRuleCont
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_novoTermoEscrita
+	p.RuleIndex = GrammarParserRULE_novoTermoEscrita
 
 	return p
 }
@@ -3686,20 +3686,20 @@ func (s *NovoTermoEscritaContext) ToStringTree(ruleNames []string, recog antlr.R
 }
 
 func (s *NovoTermoEscritaContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterNovoTermoEscrita(s)
 	}
 }
 
 func (s *NovoTermoEscritaContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitNovoTermoEscrita(s)
 	}
 }
 
-func (p *MyGrammarParser) NovoTermoEscrita() (localctx INovoTermoEscritaContext) {
+func (p *GrammarParser) NovoTermoEscrita() (localctx INovoTermoEscritaContext) {
 	localctx = NewNovoTermoEscritaContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 42, MyGrammarParserRULE_novoTermoEscrita)
+	p.EnterRule(localctx, 42, GrammarParserRULE_novoTermoEscrita)
 	p.SetState(225)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -3707,11 +3707,11 @@ func (p *MyGrammarParser) NovoTermoEscrita() (localctx INovoTermoEscritaContext)
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__2:
+	case GrammarParserT__2:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(220)
-			p.Match(MyGrammarParserT__2)
+			p.Match(GrammarParserT__2)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3726,7 +3726,7 @@ func (p *MyGrammarParser) NovoTermoEscrita() (localctx INovoTermoEscritaContext)
 			p.NovoTermoEscrita()
 		}
 
-	case MyGrammarParserRPAREN:
+	case GrammarParserRPAREN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -3774,13 +3774,13 @@ type SelecaoContext struct {
 func NewEmptySelecaoContext() *SelecaoContext {
 	var p = new(SelecaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_selecao
+	p.RuleIndex = GrammarParserRULE_selecao
 	return p
 }
 
 func InitEmptySelecaoContext(p *SelecaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_selecao
+	p.RuleIndex = GrammarParserRULE_selecao
 }
 
 func (*SelecaoContext) IsSelecaoContext() {}
@@ -3791,7 +3791,7 @@ func NewSelecaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_selecao
+	p.RuleIndex = GrammarParserRULE_selecao
 
 	return p
 }
@@ -3799,11 +3799,11 @@ func NewSelecaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 func (s *SelecaoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *SelecaoContext) IF() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserIF, 0)
+	return s.GetToken(GrammarParserIF, 0)
 }
 
 func (s *SelecaoContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *SelecaoContext) Expressao() IExpressaoContext {
@@ -3823,7 +3823,7 @@ func (s *SelecaoContext) Expressao() IExpressaoContext {
 }
 
 func (s *SelecaoContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *SelecaoContext) Bloco() IBlocoContext {
@@ -3867,24 +3867,24 @@ func (s *SelecaoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *SelecaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterSelecao(s)
 	}
 }
 
 func (s *SelecaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitSelecao(s)
 	}
 }
 
-func (p *MyGrammarParser) Selecao() (localctx ISelecaoContext) {
+func (p *GrammarParser) Selecao() (localctx ISelecaoContext) {
 	localctx = NewSelecaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 44, MyGrammarParserRULE_selecao)
+	p.EnterRule(localctx, 44, GrammarParserRULE_selecao)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(227)
-		p.Match(MyGrammarParserIF)
+		p.Match(GrammarParserIF)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3892,7 +3892,7 @@ func (p *MyGrammarParser) Selecao() (localctx ISelecaoContext) {
 	}
 	{
 		p.SetState(228)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3904,7 +3904,7 @@ func (p *MyGrammarParser) Selecao() (localctx ISelecaoContext) {
 	}
 	{
 		p.SetState(230)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3955,13 +3955,13 @@ type SenaoContext struct {
 func NewEmptySenaoContext() *SenaoContext {
 	var p = new(SenaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_senao
+	p.RuleIndex = GrammarParserRULE_senao
 	return p
 }
 
 func InitEmptySenaoContext(p *SenaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_senao
+	p.RuleIndex = GrammarParserRULE_senao
 }
 
 func (*SenaoContext) IsSenaoContext() {}
@@ -3972,7 +3972,7 @@ func NewSenaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_senao
+	p.RuleIndex = GrammarParserRULE_senao
 
 	return p
 }
@@ -3980,7 +3980,7 @@ func NewSenaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 func (s *SenaoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *SenaoContext) ELSE() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserELSE, 0)
+	return s.GetToken(GrammarParserELSE, 0)
 }
 
 func (s *SenaoContext) Bloco() IBlocoContext {
@@ -4008,20 +4008,20 @@ func (s *SenaoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) 
 }
 
 func (s *SenaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterSenao(s)
 	}
 }
 
 func (s *SenaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitSenao(s)
 	}
 }
 
-func (p *MyGrammarParser) Senao() (localctx ISenaoContext) {
+func (p *GrammarParser) Senao() (localctx ISenaoContext) {
 	localctx = NewSenaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 46, MyGrammarParserRULE_senao)
+	p.EnterRule(localctx, 46, GrammarParserRULE_senao)
 	p.SetState(237)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -4029,11 +4029,11 @@ func (p *MyGrammarParser) Senao() (localctx ISenaoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserELSE:
+	case GrammarParserELSE:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(234)
-			p.Match(MyGrammarParserELSE)
+			p.Match(GrammarParserELSE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -4044,7 +4044,7 @@ func (p *MyGrammarParser) Senao() (localctx ISenaoContext) {
 			p.Bloco()
 		}
 
-	case MyGrammarParserT__3, MyGrammarParserRETURN, MyGrammarParserIF, MyGrammarParserWHILE, MyGrammarParserSCANF, MyGrammarParserPRINTLN, MyGrammarParserRBRACE, MyGrammarParserID:
+	case GrammarParserT__3, GrammarParserRETURN, GrammarParserIF, GrammarParserWHILE, GrammarParserSCANF, GrammarParserPRINTLN, GrammarParserRBRACE, GrammarParserID:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -4091,13 +4091,13 @@ type EnquantoContext struct {
 func NewEmptyEnquantoContext() *EnquantoContext {
 	var p = new(EnquantoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_enquanto
+	p.RuleIndex = GrammarParserRULE_enquanto
 	return p
 }
 
 func InitEmptyEnquantoContext(p *EnquantoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_enquanto
+	p.RuleIndex = GrammarParserRULE_enquanto
 }
 
 func (*EnquantoContext) IsEnquantoContext() {}
@@ -4108,7 +4108,7 @@ func NewEnquantoContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_enquanto
+	p.RuleIndex = GrammarParserRULE_enquanto
 
 	return p
 }
@@ -4116,11 +4116,11 @@ func NewEnquantoContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 func (s *EnquantoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *EnquantoContext) WHILE() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserWHILE, 0)
+	return s.GetToken(GrammarParserWHILE, 0)
 }
 
 func (s *EnquantoContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *EnquantoContext) Expressao() IExpressaoContext {
@@ -4140,7 +4140,7 @@ func (s *EnquantoContext) Expressao() IExpressaoContext {
 }
 
 func (s *EnquantoContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *EnquantoContext) Bloco() IBlocoContext {
@@ -4168,24 +4168,24 @@ func (s *EnquantoContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 }
 
 func (s *EnquantoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterEnquanto(s)
 	}
 }
 
 func (s *EnquantoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitEnquanto(s)
 	}
 }
 
-func (p *MyGrammarParser) Enquanto() (localctx IEnquantoContext) {
+func (p *GrammarParser) Enquanto() (localctx IEnquantoContext) {
 	localctx = NewEnquantoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 48, MyGrammarParserRULE_enquanto)
+	p.EnterRule(localctx, 48, GrammarParserRULE_enquanto)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(239)
-		p.Match(MyGrammarParserWHILE)
+		p.Match(GrammarParserWHILE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4193,7 +4193,7 @@ func (p *MyGrammarParser) Enquanto() (localctx IEnquantoContext) {
 	}
 	{
 		p.SetState(240)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4205,7 +4205,7 @@ func (p *MyGrammarParser) Enquanto() (localctx IEnquantoContext) {
 	}
 	{
 		p.SetState(242)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4254,13 +4254,13 @@ type AtribuicaoContext struct {
 func NewEmptyAtribuicaoContext() *AtribuicaoContext {
 	var p = new(AtribuicaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_atribuicao
+	p.RuleIndex = GrammarParserRULE_atribuicao
 	return p
 }
 
 func InitEmptyAtribuicaoContext(p *AtribuicaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_atribuicao
+	p.RuleIndex = GrammarParserRULE_atribuicao
 }
 
 func (*AtribuicaoContext) IsAtribuicaoContext() {}
@@ -4271,7 +4271,7 @@ func NewAtribuicaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_atribuicao
+	p.RuleIndex = GrammarParserRULE_atribuicao
 
 	return p
 }
@@ -4279,11 +4279,11 @@ func NewAtribuicaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 func (s *AtribuicaoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *AtribuicaoContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *AtribuicaoContext) ASSIGN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserASSIGN, 0)
+	return s.GetToken(GrammarParserASSIGN, 0)
 }
 
 func (s *AtribuicaoContext) Complemento() IComplementoContext {
@@ -4303,7 +4303,7 @@ func (s *AtribuicaoContext) Complemento() IComplementoContext {
 }
 
 func (s *AtribuicaoContext) SEMI() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserSEMI, 0)
+	return s.GetToken(GrammarParserSEMI, 0)
 }
 
 func (s *AtribuicaoContext) GetRuleContext() antlr.RuleContext {
@@ -4315,24 +4315,24 @@ func (s *AtribuicaoContext) ToStringTree(ruleNames []string, recog antlr.Recogni
 }
 
 func (s *AtribuicaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterAtribuicao(s)
 	}
 }
 
 func (s *AtribuicaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitAtribuicao(s)
 	}
 }
 
-func (p *MyGrammarParser) Atribuicao() (localctx IAtribuicaoContext) {
+func (p *GrammarParser) Atribuicao() (localctx IAtribuicaoContext) {
 	localctx = NewAtribuicaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 50, MyGrammarParserRULE_atribuicao)
+	p.EnterRule(localctx, 50, GrammarParserRULE_atribuicao)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(245)
-		p.Match(MyGrammarParserID)
+		p.Match(GrammarParserID)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4340,7 +4340,7 @@ func (p *MyGrammarParser) Atribuicao() (localctx IAtribuicaoContext) {
 	}
 	{
 		p.SetState(246)
-		p.Match(MyGrammarParserASSIGN)
+		p.Match(GrammarParserASSIGN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4352,7 +4352,7 @@ func (p *MyGrammarParser) Atribuicao() (localctx IAtribuicaoContext) {
 	}
 	{
 		p.SetState(248)
-		p.Match(MyGrammarParserSEMI)
+		p.Match(GrammarParserSEMI)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4395,13 +4395,13 @@ type ComplementoContext struct {
 func NewEmptyComplementoContext() *ComplementoContext {
 	var p = new(ComplementoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_complemento
+	p.RuleIndex = GrammarParserRULE_complemento
 	return p
 }
 
 func InitEmptyComplementoContext(p *ComplementoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_complemento
+	p.RuleIndex = GrammarParserRULE_complemento
 }
 
 func (*ComplementoContext) IsComplementoContext() {}
@@ -4412,7 +4412,7 @@ func NewComplementoContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_complemento
+	p.RuleIndex = GrammarParserRULE_complemento
 
 	return p
 }
@@ -4460,20 +4460,20 @@ func (s *ComplementoContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 }
 
 func (s *ComplementoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterComplemento(s)
 	}
 }
 
 func (s *ComplementoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitComplemento(s)
 	}
 }
 
-func (p *MyGrammarParser) Complemento() (localctx IComplementoContext) {
+func (p *GrammarParser) Complemento() (localctx IComplementoContext) {
 	localctx = NewComplementoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 52, MyGrammarParserRULE_complemento)
+	p.EnterRule(localctx, 52, GrammarParserRULE_complemento)
 	p.SetState(252)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -4481,14 +4481,14 @@ func (p *MyGrammarParser) Complemento() (localctx IComplementoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__6, MyGrammarParserCONSTANTE, MyGrammarParserTEXTO, MyGrammarParserLPAREN, MyGrammarParserPLUS, MyGrammarParserMINUS, MyGrammarParserID:
+	case GrammarParserT__6, GrammarParserCONSTANTE, GrammarParserTEXTO, GrammarParserLPAREN, GrammarParserPLUS, GrammarParserMINUS, GrammarParserID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(250)
 			p.Expressao()
 		}
 
-	case MyGrammarParserT__3:
+	case GrammarParserT__3:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(251)
@@ -4538,13 +4538,13 @@ type FuncaoContext struct {
 func NewEmptyFuncaoContext() *FuncaoContext {
 	var p = new(FuncaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_funcao
+	p.RuleIndex = GrammarParserRULE_funcao
 	return p
 }
 
 func InitEmptyFuncaoContext(p *FuncaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_funcao
+	p.RuleIndex = GrammarParserRULE_funcao
 }
 
 func (*FuncaoContext) IsFuncaoContext() {}
@@ -4555,7 +4555,7 @@ func NewFuncaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_funcao
+	p.RuleIndex = GrammarParserRULE_funcao
 
 	return p
 }
@@ -4563,11 +4563,11 @@ func NewFuncaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 func (s *FuncaoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *FuncaoContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *FuncaoContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *FuncaoContext) Argumentos() IArgumentosContext {
@@ -4587,7 +4587,7 @@ func (s *FuncaoContext) Argumentos() IArgumentosContext {
 }
 
 func (s *FuncaoContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *FuncaoContext) GetRuleContext() antlr.RuleContext {
@@ -4599,24 +4599,24 @@ func (s *FuncaoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 }
 
 func (s *FuncaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterFuncao(s)
 	}
 }
 
 func (s *FuncaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitFuncao(s)
 	}
 }
 
-func (p *MyGrammarParser) Funcao() (localctx IFuncaoContext) {
+func (p *GrammarParser) Funcao() (localctx IFuncaoContext) {
 	localctx = NewFuncaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 54, MyGrammarParserRULE_funcao)
+	p.EnterRule(localctx, 54, GrammarParserRULE_funcao)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(254)
-		p.Match(MyGrammarParserT__3)
+		p.Match(GrammarParserT__3)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4624,7 +4624,7 @@ func (p *MyGrammarParser) Funcao() (localctx IFuncaoContext) {
 	}
 	{
 		p.SetState(255)
-		p.Match(MyGrammarParserID)
+		p.Match(GrammarParserID)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4632,7 +4632,7 @@ func (p *MyGrammarParser) Funcao() (localctx IFuncaoContext) {
 	}
 	{
 		p.SetState(256)
-		p.Match(MyGrammarParserLPAREN)
+		p.Match(GrammarParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4644,7 +4644,7 @@ func (p *MyGrammarParser) Funcao() (localctx IFuncaoContext) {
 	}
 	{
 		p.SetState(258)
-		p.Match(MyGrammarParserRPAREN)
+		p.Match(GrammarParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4687,13 +4687,13 @@ type ArgumentosContext struct {
 func NewEmptyArgumentosContext() *ArgumentosContext {
 	var p = new(ArgumentosContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_argumentos
+	p.RuleIndex = GrammarParserRULE_argumentos
 	return p
 }
 
 func InitEmptyArgumentosContext(p *ArgumentosContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_argumentos
+	p.RuleIndex = GrammarParserRULE_argumentos
 }
 
 func (*ArgumentosContext) IsArgumentosContext() {}
@@ -4704,7 +4704,7 @@ func NewArgumentosContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_argumentos
+	p.RuleIndex = GrammarParserRULE_argumentos
 
 	return p
 }
@@ -4752,20 +4752,20 @@ func (s *ArgumentosContext) ToStringTree(ruleNames []string, recog antlr.Recogni
 }
 
 func (s *ArgumentosContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterArgumentos(s)
 	}
 }
 
 func (s *ArgumentosContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitArgumentos(s)
 	}
 }
 
-func (p *MyGrammarParser) Argumentos() (localctx IArgumentosContext) {
+func (p *GrammarParser) Argumentos() (localctx IArgumentosContext) {
 	localctx = NewArgumentosContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 56, MyGrammarParserRULE_argumentos)
+	p.EnterRule(localctx, 56, GrammarParserRULE_argumentos)
 	p.SetState(264)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -4773,7 +4773,7 @@ func (p *MyGrammarParser) Argumentos() (localctx IArgumentosContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__6, MyGrammarParserCONSTANTE, MyGrammarParserTEXTO, MyGrammarParserLPAREN, MyGrammarParserPLUS, MyGrammarParserMINUS, MyGrammarParserID:
+	case GrammarParserT__6, GrammarParserCONSTANTE, GrammarParserTEXTO, GrammarParserLPAREN, GrammarParserPLUS, GrammarParserMINUS, GrammarParserID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(260)
@@ -4784,7 +4784,7 @@ func (p *MyGrammarParser) Argumentos() (localctx IArgumentosContext) {
 			p.NovoArgumento()
 		}
 
-	case MyGrammarParserRPAREN:
+	case GrammarParserRPAREN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -4828,13 +4828,13 @@ type NovoArgumentoContext struct {
 func NewEmptyNovoArgumentoContext() *NovoArgumentoContext {
 	var p = new(NovoArgumentoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_novoArgumento
+	p.RuleIndex = GrammarParserRULE_novoArgumento
 	return p
 }
 
 func InitEmptyNovoArgumentoContext(p *NovoArgumentoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_novoArgumento
+	p.RuleIndex = GrammarParserRULE_novoArgumento
 }
 
 func (*NovoArgumentoContext) IsNovoArgumentoContext() {}
@@ -4845,7 +4845,7 @@ func NewNovoArgumentoContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_novoArgumento
+	p.RuleIndex = GrammarParserRULE_novoArgumento
 
 	return p
 }
@@ -4893,20 +4893,20 @@ func (s *NovoArgumentoContext) ToStringTree(ruleNames []string, recog antlr.Reco
 }
 
 func (s *NovoArgumentoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterNovoArgumento(s)
 	}
 }
 
 func (s *NovoArgumentoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitNovoArgumento(s)
 	}
 }
 
-func (p *MyGrammarParser) NovoArgumento() (localctx INovoArgumentoContext) {
+func (p *GrammarParser) NovoArgumento() (localctx INovoArgumentoContext) {
 	localctx = NewNovoArgumentoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 58, MyGrammarParserRULE_novoArgumento)
+	p.EnterRule(localctx, 58, GrammarParserRULE_novoArgumento)
 	p.SetState(271)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -4914,11 +4914,11 @@ func (p *MyGrammarParser) NovoArgumento() (localctx INovoArgumentoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__2:
+	case GrammarParserT__2:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(266)
-			p.Match(MyGrammarParserT__2)
+			p.Match(GrammarParserT__2)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -4933,7 +4933,7 @@ func (p *MyGrammarParser) NovoArgumento() (localctx INovoArgumentoContext) {
 			p.NovoArgumento()
 		}
 
-	case MyGrammarParserRPAREN:
+	case GrammarParserRPAREN:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -4978,13 +4978,13 @@ type RetornoContext struct {
 func NewEmptyRetornoContext() *RetornoContext {
 	var p = new(RetornoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_retorno
+	p.RuleIndex = GrammarParserRULE_retorno
 	return p
 }
 
 func InitEmptyRetornoContext(p *RetornoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_retorno
+	p.RuleIndex = GrammarParserRULE_retorno
 }
 
 func (*RetornoContext) IsRetornoContext() {}
@@ -4995,7 +4995,7 @@ func NewRetornoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_retorno
+	p.RuleIndex = GrammarParserRULE_retorno
 
 	return p
 }
@@ -5003,7 +5003,7 @@ func NewRetornoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 func (s *RetornoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *RetornoContext) RETURN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRETURN, 0)
+	return s.GetToken(GrammarParserRETURN, 0)
 }
 
 func (s *RetornoContext) Expressao() IExpressaoContext {
@@ -5023,7 +5023,7 @@ func (s *RetornoContext) Expressao() IExpressaoContext {
 }
 
 func (s *RetornoContext) SEMI() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserSEMI, 0)
+	return s.GetToken(GrammarParserSEMI, 0)
 }
 
 func (s *RetornoContext) GetRuleContext() antlr.RuleContext {
@@ -5035,24 +5035,24 @@ func (s *RetornoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *RetornoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterRetorno(s)
 	}
 }
 
 func (s *RetornoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitRetorno(s)
 	}
 }
 
-func (p *MyGrammarParser) Retorno() (localctx IRetornoContext) {
+func (p *GrammarParser) Retorno() (localctx IRetornoContext) {
 	localctx = NewRetornoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 60, MyGrammarParserRULE_retorno)
+	p.EnterRule(localctx, 60, GrammarParserRULE_retorno)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(273)
-		p.Match(MyGrammarParserRETURN)
+		p.Match(GrammarParserRETURN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -5064,7 +5064,7 @@ func (p *MyGrammarParser) Retorno() (localctx IRetornoContext) {
 	}
 	{
 		p.SetState(275)
-		p.Match(MyGrammarParserSEMI)
+		p.Match(GrammarParserSEMI)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -5106,13 +5106,13 @@ type ExpressaoContext struct {
 func NewEmptyExpressaoContext() *ExpressaoContext {
 	var p = new(ExpressaoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_expressao
+	p.RuleIndex = GrammarParserRULE_expressao
 	return p
 }
 
 func InitEmptyExpressaoContext(p *ExpressaoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_expressao
+	p.RuleIndex = GrammarParserRULE_expressao
 }
 
 func (*ExpressaoContext) IsExpressaoContext() {}
@@ -5123,7 +5123,7 @@ func NewExpressaoContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_expressao
+	p.RuleIndex = GrammarParserRULE_expressao
 
 	return p
 }
@@ -5155,20 +5155,20 @@ func (s *ExpressaoContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 }
 
 func (s *ExpressaoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExpressao(s)
 	}
 }
 
 func (s *ExpressaoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExpressao(s)
 	}
 }
 
-func (p *MyGrammarParser) Expressao() (localctx IExpressaoContext) {
+func (p *GrammarParser) Expressao() (localctx IExpressaoContext) {
 	localctx = NewExpressaoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 62, MyGrammarParserRULE_expressao)
+	p.EnterRule(localctx, 62, GrammarParserRULE_expressao)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(277)
@@ -5211,13 +5211,13 @@ type ExprOuContext struct {
 func NewEmptyExprOuContext() *ExprOuContext {
 	var p = new(ExprOuContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprOu
+	p.RuleIndex = GrammarParserRULE_exprOu
 	return p
 }
 
 func InitEmptyExprOuContext(p *ExprOuContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprOu
+	p.RuleIndex = GrammarParserRULE_exprOu
 }
 
 func (*ExprOuContext) IsExprOuContext() {}
@@ -5228,7 +5228,7 @@ func NewExprOuContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprOu
+	p.RuleIndex = GrammarParserRULE_exprOu
 
 	return p
 }
@@ -5276,20 +5276,20 @@ func (s *ExprOuContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 }
 
 func (s *ExprOuContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprOu(s)
 	}
 }
 
 func (s *ExprOuContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprOu(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprOu() (localctx IExprOuContext) {
+func (p *GrammarParser) ExprOu() (localctx IExprOuContext) {
 	localctx = NewExprOuContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 64, MyGrammarParserRULE_exprOu)
+	p.EnterRule(localctx, 64, GrammarParserRULE_exprOu)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(279)
@@ -5336,13 +5336,13 @@ type ExprOu2Context struct {
 func NewEmptyExprOu2Context() *ExprOu2Context {
 	var p = new(ExprOu2Context)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprOu2
+	p.RuleIndex = GrammarParserRULE_exprOu2
 	return p
 }
 
 func InitEmptyExprOu2Context(p *ExprOu2Context) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprOu2
+	p.RuleIndex = GrammarParserRULE_exprOu2
 }
 
 func (*ExprOu2Context) IsExprOu2Context() {}
@@ -5353,7 +5353,7 @@ func NewExprOu2Context(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprOu2
+	p.RuleIndex = GrammarParserRULE_exprOu2
 
 	return p
 }
@@ -5401,20 +5401,20 @@ func (s *ExprOu2Context) ToStringTree(ruleNames []string, recog antlr.Recognizer
 }
 
 func (s *ExprOu2Context) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprOu2(s)
 	}
 }
 
 func (s *ExprOu2Context) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprOu2(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprOu2() (localctx IExprOu2Context) {
+func (p *GrammarParser) ExprOu2() (localctx IExprOu2Context) {
 	localctx = NewExprOu2Context(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 66, MyGrammarParserRULE_exprOu2)
+	p.EnterRule(localctx, 66, GrammarParserRULE_exprOu2)
 	p.SetState(287)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -5422,11 +5422,11 @@ func (p *MyGrammarParser) ExprOu2() (localctx IExprOu2Context) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__4:
+	case GrammarParserT__4:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(282)
-			p.Match(MyGrammarParserT__4)
+			p.Match(GrammarParserT__4)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -5441,7 +5441,7 @@ func (p *MyGrammarParser) ExprOu2() (localctx IExprOu2Context) {
 			p.ExprOu2()
 		}
 
-	case MyGrammarParserT__2, MyGrammarParserRPAREN, MyGrammarParserSEMI:
+	case GrammarParserT__2, GrammarParserRPAREN, GrammarParserSEMI:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -5485,13 +5485,13 @@ type ExprEContext struct {
 func NewEmptyExprEContext() *ExprEContext {
 	var p = new(ExprEContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprE
+	p.RuleIndex = GrammarParserRULE_exprE
 	return p
 }
 
 func InitEmptyExprEContext(p *ExprEContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprE
+	p.RuleIndex = GrammarParserRULE_exprE
 }
 
 func (*ExprEContext) IsExprEContext() {}
@@ -5502,7 +5502,7 @@ func NewExprEContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprE
+	p.RuleIndex = GrammarParserRULE_exprE
 
 	return p
 }
@@ -5550,20 +5550,20 @@ func (s *ExprEContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) 
 }
 
 func (s *ExprEContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprE(s)
 	}
 }
 
 func (s *ExprEContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprE(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprE() (localctx IExprEContext) {
+func (p *GrammarParser) ExprE() (localctx IExprEContext) {
 	localctx = NewExprEContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 68, MyGrammarParserRULE_exprE)
+	p.EnterRule(localctx, 68, GrammarParserRULE_exprE)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(289)
@@ -5610,13 +5610,13 @@ type ExprE2Context struct {
 func NewEmptyExprE2Context() *ExprE2Context {
 	var p = new(ExprE2Context)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprE2
+	p.RuleIndex = GrammarParserRULE_exprE2
 	return p
 }
 
 func InitEmptyExprE2Context(p *ExprE2Context) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprE2
+	p.RuleIndex = GrammarParserRULE_exprE2
 }
 
 func (*ExprE2Context) IsExprE2Context() {}
@@ -5627,7 +5627,7 @@ func NewExprE2Context(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprE2
+	p.RuleIndex = GrammarParserRULE_exprE2
 
 	return p
 }
@@ -5675,20 +5675,20 @@ func (s *ExprE2Context) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 }
 
 func (s *ExprE2Context) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprE2(s)
 	}
 }
 
 func (s *ExprE2Context) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprE2(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprE2() (localctx IExprE2Context) {
+func (p *GrammarParser) ExprE2() (localctx IExprE2Context) {
 	localctx = NewExprE2Context(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 70, MyGrammarParserRULE_exprE2)
+	p.EnterRule(localctx, 70, GrammarParserRULE_exprE2)
 	p.SetState(297)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -5696,11 +5696,11 @@ func (p *MyGrammarParser) ExprE2() (localctx IExprE2Context) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserT__5:
+	case GrammarParserT__5:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(292)
-			p.Match(MyGrammarParserT__5)
+			p.Match(GrammarParserT__5)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -5715,7 +5715,7 @@ func (p *MyGrammarParser) ExprE2() (localctx IExprE2Context) {
 			p.ExprE2()
 		}
 
-	case MyGrammarParserT__2, MyGrammarParserT__4, MyGrammarParserRPAREN, MyGrammarParserSEMI:
+	case GrammarParserT__2, GrammarParserT__4, GrammarParserRPAREN, GrammarParserSEMI:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -5759,13 +5759,13 @@ type ExprRelacionalContext struct {
 func NewEmptyExprRelacionalContext() *ExprRelacionalContext {
 	var p = new(ExprRelacionalContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprRelacional
+	p.RuleIndex = GrammarParserRULE_exprRelacional
 	return p
 }
 
 func InitEmptyExprRelacionalContext(p *ExprRelacionalContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprRelacional
+	p.RuleIndex = GrammarParserRULE_exprRelacional
 }
 
 func (*ExprRelacionalContext) IsExprRelacionalContext() {}
@@ -5776,7 +5776,7 @@ func NewExprRelacionalContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprRelacional
+	p.RuleIndex = GrammarParserRULE_exprRelacional
 
 	return p
 }
@@ -5824,20 +5824,20 @@ func (s *ExprRelacionalContext) ToStringTree(ruleNames []string, recog antlr.Rec
 }
 
 func (s *ExprRelacionalContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprRelacional(s)
 	}
 }
 
 func (s *ExprRelacionalContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprRelacional(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprRelacional() (localctx IExprRelacionalContext) {
+func (p *GrammarParser) ExprRelacional() (localctx IExprRelacionalContext) {
 	localctx = NewExprRelacionalContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 72, MyGrammarParserRULE_exprRelacional)
+	p.EnterRule(localctx, 72, GrammarParserRULE_exprRelacional)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(299)
@@ -5884,13 +5884,13 @@ type ExprRelacional2Context struct {
 func NewEmptyExprRelacional2Context() *ExprRelacional2Context {
 	var p = new(ExprRelacional2Context)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprRelacional2
+	p.RuleIndex = GrammarParserRULE_exprRelacional2
 	return p
 }
 
 func InitEmptyExprRelacional2Context(p *ExprRelacional2Context) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprRelacional2
+	p.RuleIndex = GrammarParserRULE_exprRelacional2
 }
 
 func (*ExprRelacional2Context) IsExprRelacional2Context() {}
@@ -5901,7 +5901,7 @@ func NewExprRelacional2Context(parser antlr.Parser, parent antlr.ParserRuleConte
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprRelacional2
+	p.RuleIndex = GrammarParserRULE_exprRelacional2
 
 	return p
 }
@@ -5909,7 +5909,7 @@ func NewExprRelacional2Context(parser antlr.Parser, parent antlr.ParserRuleConte
 func (s *ExprRelacional2Context) GetParser() antlr.Parser { return s.parser }
 
 func (s *ExprRelacional2Context) COMP() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserCOMP, 0)
+	return s.GetToken(GrammarParserCOMP, 0)
 }
 
 func (s *ExprRelacional2Context) ExprAditiva() IExprAditivaContext {
@@ -5937,20 +5937,20 @@ func (s *ExprRelacional2Context) ToStringTree(ruleNames []string, recog antlr.Re
 }
 
 func (s *ExprRelacional2Context) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprRelacional2(s)
 	}
 }
 
 func (s *ExprRelacional2Context) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprRelacional2(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprRelacional2() (localctx IExprRelacional2Context) {
+func (p *GrammarParser) ExprRelacional2() (localctx IExprRelacional2Context) {
 	localctx = NewExprRelacional2Context(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 74, MyGrammarParserRULE_exprRelacional2)
+	p.EnterRule(localctx, 74, GrammarParserRULE_exprRelacional2)
 	p.SetState(305)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -5958,11 +5958,11 @@ func (p *MyGrammarParser) ExprRelacional2() (localctx IExprRelacional2Context) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserCOMP:
+	case GrammarParserCOMP:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(302)
-			p.Match(MyGrammarParserCOMP)
+			p.Match(GrammarParserCOMP)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -5973,7 +5973,7 @@ func (p *MyGrammarParser) ExprRelacional2() (localctx IExprRelacional2Context) {
 			p.ExprAditiva()
 		}
 
-	case MyGrammarParserT__2, MyGrammarParserT__4, MyGrammarParserT__5, MyGrammarParserRPAREN, MyGrammarParserSEMI:
+	case GrammarParserT__2, GrammarParserT__4, GrammarParserT__5, GrammarParserRPAREN, GrammarParserSEMI:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -6017,13 +6017,13 @@ type ExprAditivaContext struct {
 func NewEmptyExprAditivaContext() *ExprAditivaContext {
 	var p = new(ExprAditivaContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprAditiva
+	p.RuleIndex = GrammarParserRULE_exprAditiva
 	return p
 }
 
 func InitEmptyExprAditivaContext(p *ExprAditivaContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprAditiva
+	p.RuleIndex = GrammarParserRULE_exprAditiva
 }
 
 func (*ExprAditivaContext) IsExprAditivaContext() {}
@@ -6034,7 +6034,7 @@ func NewExprAditivaContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprAditiva
+	p.RuleIndex = GrammarParserRULE_exprAditiva
 
 	return p
 }
@@ -6082,20 +6082,20 @@ func (s *ExprAditivaContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 }
 
 func (s *ExprAditivaContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprAditiva(s)
 	}
 }
 
 func (s *ExprAditivaContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprAditiva(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprAditiva() (localctx IExprAditivaContext) {
+func (p *GrammarParser) ExprAditiva() (localctx IExprAditivaContext) {
 	localctx = NewExprAditivaContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 76, MyGrammarParserRULE_exprAditiva)
+	p.EnterRule(localctx, 76, GrammarParserRULE_exprAditiva)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(307)
@@ -6143,13 +6143,13 @@ type ExprAditiva2Context struct {
 func NewEmptyExprAditiva2Context() *ExprAditiva2Context {
 	var p = new(ExprAditiva2Context)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprAditiva2
+	p.RuleIndex = GrammarParserRULE_exprAditiva2
 	return p
 }
 
 func InitEmptyExprAditiva2Context(p *ExprAditiva2Context) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprAditiva2
+	p.RuleIndex = GrammarParserRULE_exprAditiva2
 }
 
 func (*ExprAditiva2Context) IsExprAditiva2Context() {}
@@ -6160,7 +6160,7 @@ func NewExprAditiva2Context(parser antlr.Parser, parent antlr.ParserRuleContext,
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprAditiva2
+	p.RuleIndex = GrammarParserRULE_exprAditiva2
 
 	return p
 }
@@ -6224,20 +6224,20 @@ func (s *ExprAditiva2Context) ToStringTree(ruleNames []string, recog antlr.Recog
 }
 
 func (s *ExprAditiva2Context) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprAditiva2(s)
 	}
 }
 
 func (s *ExprAditiva2Context) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprAditiva2(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprAditiva2() (localctx IExprAditiva2Context) {
+func (p *GrammarParser) ExprAditiva2() (localctx IExprAditiva2Context) {
 	localctx = NewExprAditiva2Context(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 78, MyGrammarParserRULE_exprAditiva2)
+	p.EnterRule(localctx, 78, GrammarParserRULE_exprAditiva2)
 	p.SetState(315)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -6245,7 +6245,7 @@ func (p *MyGrammarParser) ExprAditiva2() (localctx IExprAditiva2Context) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserPLUS, MyGrammarParserMINUS:
+	case GrammarParserPLUS, GrammarParserMINUS:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(310)
@@ -6260,7 +6260,7 @@ func (p *MyGrammarParser) ExprAditiva2() (localctx IExprAditiva2Context) {
 			p.ExprAditiva2()
 		}
 
-	case MyGrammarParserT__1, MyGrammarParserT__2, MyGrammarParserT__4, MyGrammarParserT__5, MyGrammarParserCOMP, MyGrammarParserRPAREN, MyGrammarParserSEMI:
+	case GrammarParserT__1, GrammarParserT__2, GrammarParserT__4, GrammarParserT__5, GrammarParserCOMP, GrammarParserRPAREN, GrammarParserSEMI:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -6304,13 +6304,13 @@ type OpAditivoContext struct {
 func NewEmptyOpAditivoContext() *OpAditivoContext {
 	var p = new(OpAditivoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_opAditivo
+	p.RuleIndex = GrammarParserRULE_opAditivo
 	return p
 }
 
 func InitEmptyOpAditivoContext(p *OpAditivoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_opAditivo
+	p.RuleIndex = GrammarParserRULE_opAditivo
 }
 
 func (*OpAditivoContext) IsOpAditivoContext() {}
@@ -6321,7 +6321,7 @@ func NewOpAditivoContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_opAditivo
+	p.RuleIndex = GrammarParserRULE_opAditivo
 
 	return p
 }
@@ -6329,11 +6329,11 @@ func NewOpAditivoContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 func (s *OpAditivoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *OpAditivoContext) PLUS() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserPLUS, 0)
+	return s.GetToken(GrammarParserPLUS, 0)
 }
 
 func (s *OpAditivoContext) MINUS() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserMINUS, 0)
+	return s.GetToken(GrammarParserMINUS, 0)
 }
 
 func (s *OpAditivoContext) GetRuleContext() antlr.RuleContext {
@@ -6345,20 +6345,20 @@ func (s *OpAditivoContext) ToStringTree(ruleNames []string, recog antlr.Recogniz
 }
 
 func (s *OpAditivoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterOpAditivo(s)
 	}
 }
 
 func (s *OpAditivoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitOpAditivo(s)
 	}
 }
 
-func (p *MyGrammarParser) OpAditivo() (localctx IOpAditivoContext) {
+func (p *GrammarParser) OpAditivo() (localctx IOpAditivoContext) {
 	localctx = NewOpAditivoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 80, MyGrammarParserRULE_opAditivo)
+	p.EnterRule(localctx, 80, GrammarParserRULE_opAditivo)
 	var _la int
 
 	p.EnterOuterAlt(localctx, 1)
@@ -6366,7 +6366,7 @@ func (p *MyGrammarParser) OpAditivo() (localctx IOpAditivoContext) {
 		p.SetState(317)
 		_la = p.GetTokenStream().LA(1)
 
-		if !(_la == MyGrammarParserPLUS || _la == MyGrammarParserMINUS) {
+		if !(_la == GrammarParserPLUS || _la == GrammarParserMINUS) {
 			p.GetErrorHandler().RecoverInline(p)
 		} else {
 			p.GetErrorHandler().ReportMatch(p)
@@ -6410,13 +6410,13 @@ type ExprMultiplicativaContext struct {
 func NewEmptyExprMultiplicativaContext() *ExprMultiplicativaContext {
 	var p = new(ExprMultiplicativaContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprMultiplicativa
+	p.RuleIndex = GrammarParserRULE_exprMultiplicativa
 	return p
 }
 
 func InitEmptyExprMultiplicativaContext(p *ExprMultiplicativaContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprMultiplicativa
+	p.RuleIndex = GrammarParserRULE_exprMultiplicativa
 }
 
 func (*ExprMultiplicativaContext) IsExprMultiplicativaContext() {}
@@ -6427,7 +6427,7 @@ func NewExprMultiplicativaContext(parser antlr.Parser, parent antlr.ParserRuleCo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprMultiplicativa
+	p.RuleIndex = GrammarParserRULE_exprMultiplicativa
 
 	return p
 }
@@ -6475,20 +6475,20 @@ func (s *ExprMultiplicativaContext) ToStringTree(ruleNames []string, recog antlr
 }
 
 func (s *ExprMultiplicativaContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprMultiplicativa(s)
 	}
 }
 
 func (s *ExprMultiplicativaContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprMultiplicativa(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprMultiplicativa() (localctx IExprMultiplicativaContext) {
+func (p *GrammarParser) ExprMultiplicativa() (localctx IExprMultiplicativaContext) {
 	localctx = NewExprMultiplicativaContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 82, MyGrammarParserRULE_exprMultiplicativa)
+	p.EnterRule(localctx, 82, GrammarParserRULE_exprMultiplicativa)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(319)
@@ -6536,13 +6536,13 @@ type ExprMultiplicativa2Context struct {
 func NewEmptyExprMultiplicativa2Context() *ExprMultiplicativa2Context {
 	var p = new(ExprMultiplicativa2Context)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprMultiplicativa2
+	p.RuleIndex = GrammarParserRULE_exprMultiplicativa2
 	return p
 }
 
 func InitEmptyExprMultiplicativa2Context(p *ExprMultiplicativa2Context) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_exprMultiplicativa2
+	p.RuleIndex = GrammarParserRULE_exprMultiplicativa2
 }
 
 func (*ExprMultiplicativa2Context) IsExprMultiplicativa2Context() {}
@@ -6553,7 +6553,7 @@ func NewExprMultiplicativa2Context(parser antlr.Parser, parent antlr.ParserRuleC
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_exprMultiplicativa2
+	p.RuleIndex = GrammarParserRULE_exprMultiplicativa2
 
 	return p
 }
@@ -6617,20 +6617,20 @@ func (s *ExprMultiplicativa2Context) ToStringTree(ruleNames []string, recog antl
 }
 
 func (s *ExprMultiplicativa2Context) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterExprMultiplicativa2(s)
 	}
 }
 
 func (s *ExprMultiplicativa2Context) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitExprMultiplicativa2(s)
 	}
 }
 
-func (p *MyGrammarParser) ExprMultiplicativa2() (localctx IExprMultiplicativa2Context) {
+func (p *GrammarParser) ExprMultiplicativa2() (localctx IExprMultiplicativa2Context) {
 	localctx = NewExprMultiplicativa2Context(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 84, MyGrammarParserRULE_exprMultiplicativa2)
+	p.EnterRule(localctx, 84, GrammarParserRULE_exprMultiplicativa2)
 	p.SetState(327)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -6638,7 +6638,7 @@ func (p *MyGrammarParser) ExprMultiplicativa2() (localctx IExprMultiplicativa2Co
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserMUL, MyGrammarParserDIV, MyGrammarParserMOD:
+	case GrammarParserMUL, GrammarParserDIV, GrammarParserMOD:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(322)
@@ -6653,7 +6653,7 @@ func (p *MyGrammarParser) ExprMultiplicativa2() (localctx IExprMultiplicativa2Co
 			p.ExprMultiplicativa2()
 		}
 
-	case MyGrammarParserT__1, MyGrammarParserT__2, MyGrammarParserT__4, MyGrammarParserT__5, MyGrammarParserCOMP, MyGrammarParserRPAREN, MyGrammarParserSEMI, MyGrammarParserPLUS, MyGrammarParserMINUS:
+	case GrammarParserT__1, GrammarParserT__2, GrammarParserT__4, GrammarParserT__5, GrammarParserCOMP, GrammarParserRPAREN, GrammarParserSEMI, GrammarParserPLUS, GrammarParserMINUS:
 		p.EnterOuterAlt(localctx, 2)
 
 	default:
@@ -6698,13 +6698,13 @@ type OpMultiplicativoContext struct {
 func NewEmptyOpMultiplicativoContext() *OpMultiplicativoContext {
 	var p = new(OpMultiplicativoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_opMultiplicativo
+	p.RuleIndex = GrammarParserRULE_opMultiplicativo
 	return p
 }
 
 func InitEmptyOpMultiplicativoContext(p *OpMultiplicativoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_opMultiplicativo
+	p.RuleIndex = GrammarParserRULE_opMultiplicativo
 }
 
 func (*OpMultiplicativoContext) IsOpMultiplicativoContext() {}
@@ -6715,7 +6715,7 @@ func NewOpMultiplicativoContext(parser antlr.Parser, parent antlr.ParserRuleCont
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_opMultiplicativo
+	p.RuleIndex = GrammarParserRULE_opMultiplicativo
 
 	return p
 }
@@ -6723,15 +6723,15 @@ func NewOpMultiplicativoContext(parser antlr.Parser, parent antlr.ParserRuleCont
 func (s *OpMultiplicativoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *OpMultiplicativoContext) MUL() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserMUL, 0)
+	return s.GetToken(GrammarParserMUL, 0)
 }
 
 func (s *OpMultiplicativoContext) DIV() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserDIV, 0)
+	return s.GetToken(GrammarParserDIV, 0)
 }
 
 func (s *OpMultiplicativoContext) MOD() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserMOD, 0)
+	return s.GetToken(GrammarParserMOD, 0)
 }
 
 func (s *OpMultiplicativoContext) GetRuleContext() antlr.RuleContext {
@@ -6743,20 +6743,20 @@ func (s *OpMultiplicativoContext) ToStringTree(ruleNames []string, recog antlr.R
 }
 
 func (s *OpMultiplicativoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterOpMultiplicativo(s)
 	}
 }
 
 func (s *OpMultiplicativoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitOpMultiplicativo(s)
 	}
 }
 
-func (p *MyGrammarParser) OpMultiplicativo() (localctx IOpMultiplicativoContext) {
+func (p *GrammarParser) OpMultiplicativo() (localctx IOpMultiplicativoContext) {
 	localctx = NewOpMultiplicativoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 86, MyGrammarParserRULE_opMultiplicativo)
+	p.EnterRule(localctx, 86, GrammarParserRULE_opMultiplicativo)
 	var _la int
 
 	p.EnterOuterAlt(localctx, 1)
@@ -6813,13 +6813,13 @@ type FatorContext struct {
 func NewEmptyFatorContext() *FatorContext {
 	var p = new(FatorContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_fator
+	p.RuleIndex = GrammarParserRULE_fator
 	return p
 }
 
 func InitEmptyFatorContext(p *FatorContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_fator
+	p.RuleIndex = GrammarParserRULE_fator
 }
 
 func (*FatorContext) IsFatorContext() {}
@@ -6830,7 +6830,7 @@ func NewFatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_fator
+	p.RuleIndex = GrammarParserRULE_fator
 
 	return p
 }
@@ -6870,7 +6870,7 @@ func (s *FatorContext) Termo() ITermoContext {
 }
 
 func (s *FatorContext) TEXTO() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserTEXTO, 0)
+	return s.GetToken(GrammarParserTEXTO, 0)
 }
 
 func (s *FatorContext) Fator() IFatorContext {
@@ -6890,7 +6890,7 @@ func (s *FatorContext) Fator() IFatorContext {
 }
 
 func (s *FatorContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserLPAREN, 0)
+	return s.GetToken(GrammarParserLPAREN, 0)
 }
 
 func (s *FatorContext) Expressao() IExpressaoContext {
@@ -6910,7 +6910,7 @@ func (s *FatorContext) Expressao() IExpressaoContext {
 }
 
 func (s *FatorContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserRPAREN, 0)
+	return s.GetToken(GrammarParserRPAREN, 0)
 }
 
 func (s *FatorContext) GetRuleContext() antlr.RuleContext {
@@ -6922,20 +6922,20 @@ func (s *FatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) 
 }
 
 func (s *FatorContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterFator(s)
 	}
 }
 
 func (s *FatorContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitFator(s)
 	}
 }
 
-func (p *MyGrammarParser) Fator() (localctx IFatorContext) {
+func (p *GrammarParser) Fator() (localctx IFatorContext) {
 	localctx = NewFatorContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 88, MyGrammarParserRULE_fator)
+	p.EnterRule(localctx, 88, GrammarParserRULE_fator)
 	p.SetState(341)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -6943,7 +6943,7 @@ func (p *MyGrammarParser) Fator() (localctx IFatorContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserCONSTANTE, MyGrammarParserPLUS, MyGrammarParserMINUS, MyGrammarParserID:
+	case GrammarParserCONSTANTE, GrammarParserPLUS, GrammarParserMINUS, GrammarParserID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(331)
@@ -6954,22 +6954,22 @@ func (p *MyGrammarParser) Fator() (localctx IFatorContext) {
 			p.Termo()
 		}
 
-	case MyGrammarParserTEXTO:
+	case GrammarParserTEXTO:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(334)
-			p.Match(MyGrammarParserTEXTO)
+			p.Match(GrammarParserTEXTO)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case MyGrammarParserT__6:
+	case GrammarParserT__6:
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(335)
-			p.Match(MyGrammarParserT__6)
+			p.Match(GrammarParserT__6)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -6980,11 +6980,11 @@ func (p *MyGrammarParser) Fator() (localctx IFatorContext) {
 			p.Fator()
 		}
 
-	case MyGrammarParserLPAREN:
+	case GrammarParserLPAREN:
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(337)
-			p.Match(MyGrammarParserLPAREN)
+			p.Match(GrammarParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -6996,7 +6996,7 @@ func (p *MyGrammarParser) Fator() (localctx IFatorContext) {
 		}
 		{
 			p.SetState(339)
-			p.Match(MyGrammarParserRPAREN)
+			p.Match(GrammarParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -7045,13 +7045,13 @@ type TermoContext struct {
 func NewEmptyTermoContext() *TermoContext {
 	var p = new(TermoContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_termo
+	p.RuleIndex = GrammarParserRULE_termo
 	return p
 }
 
 func InitEmptyTermoContext(p *TermoContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_termo
+	p.RuleIndex = GrammarParserRULE_termo
 }
 
 func (*TermoContext) IsTermoContext() {}
@@ -7062,7 +7062,7 @@ func NewTermoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_termo
+	p.RuleIndex = GrammarParserRULE_termo
 
 	return p
 }
@@ -7070,7 +7070,7 @@ func NewTermoContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 func (s *TermoContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *TermoContext) ID() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserID, 0)
+	return s.GetToken(GrammarParserID, 0)
 }
 
 func (s *TermoContext) Dimensao2() IDimensao2Context {
@@ -7090,7 +7090,7 @@ func (s *TermoContext) Dimensao2() IDimensao2Context {
 }
 
 func (s *TermoContext) CONSTANTE() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserCONSTANTE, 0)
+	return s.GetToken(GrammarParserCONSTANTE, 0)
 }
 
 func (s *TermoContext) GetRuleContext() antlr.RuleContext {
@@ -7102,20 +7102,20 @@ func (s *TermoContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) 
 }
 
 func (s *TermoContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterTermo(s)
 	}
 }
 
 func (s *TermoContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitTermo(s)
 	}
 }
 
-func (p *MyGrammarParser) Termo() (localctx ITermoContext) {
+func (p *GrammarParser) Termo() (localctx ITermoContext) {
 	localctx = NewTermoContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 90, MyGrammarParserRULE_termo)
+	p.EnterRule(localctx, 90, GrammarParserRULE_termo)
 	p.SetState(346)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -7123,11 +7123,11 @@ func (p *MyGrammarParser) Termo() (localctx ITermoContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserID:
+	case GrammarParserID:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(343)
-			p.Match(MyGrammarParserID)
+			p.Match(GrammarParserID)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -7138,11 +7138,11 @@ func (p *MyGrammarParser) Termo() (localctx ITermoContext) {
 			p.Dimensao2()
 		}
 
-	case MyGrammarParserCONSTANTE:
+	case GrammarParserCONSTANTE:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(345)
-			p.Match(MyGrammarParserCONSTANTE)
+			p.Match(GrammarParserCONSTANTE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -7190,13 +7190,13 @@ type SinalContext struct {
 func NewEmptySinalContext() *SinalContext {
 	var p = new(SinalContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_sinal
+	p.RuleIndex = GrammarParserRULE_sinal
 	return p
 }
 
 func InitEmptySinalContext(p *SinalContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = MyGrammarParserRULE_sinal
+	p.RuleIndex = GrammarParserRULE_sinal
 }
 
 func (*SinalContext) IsSinalContext() {}
@@ -7207,7 +7207,7 @@ func NewSinalContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MyGrammarParserRULE_sinal
+	p.RuleIndex = GrammarParserRULE_sinal
 
 	return p
 }
@@ -7215,11 +7215,11 @@ func NewSinalContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 func (s *SinalContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *SinalContext) PLUS() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserPLUS, 0)
+	return s.GetToken(GrammarParserPLUS, 0)
 }
 
 func (s *SinalContext) MINUS() antlr.TerminalNode {
-	return s.GetToken(MyGrammarParserMINUS, 0)
+	return s.GetToken(GrammarParserMINUS, 0)
 }
 
 func (s *SinalContext) GetRuleContext() antlr.RuleContext {
@@ -7231,20 +7231,20 @@ func (s *SinalContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) 
 }
 
 func (s *SinalContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.EnterSinal(s)
 	}
 }
 
 func (s *SinalContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MyGrammarListener); ok {
+	if listenerT, ok := listener.(GrammarListener); ok {
 		listenerT.ExitSinal(s)
 	}
 }
 
-func (p *MyGrammarParser) Sinal() (localctx ISinalContext) {
+func (p *GrammarParser) Sinal() (localctx ISinalContext) {
 	localctx = NewSinalContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 92, MyGrammarParserRULE_sinal)
+	p.EnterRule(localctx, 92, GrammarParserRULE_sinal)
 	p.SetState(351)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -7252,29 +7252,29 @@ func (p *MyGrammarParser) Sinal() (localctx ISinalContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case MyGrammarParserPLUS:
+	case GrammarParserPLUS:
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(348)
-			p.Match(MyGrammarParserPLUS)
+			p.Match(GrammarParserPLUS)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case MyGrammarParserMINUS:
+	case GrammarParserMINUS:
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(349)
-			p.Match(MyGrammarParserMINUS)
+			p.Match(GrammarParserMINUS)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case MyGrammarParserCONSTANTE, MyGrammarParserID:
+	case GrammarParserCONSTANTE, GrammarParserID:
 		p.EnterOuterAlt(localctx, 3)
 
 	default:

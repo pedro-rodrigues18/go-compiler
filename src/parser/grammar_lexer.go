@@ -1,4 +1,4 @@
-// Code generated from MyGrammar.g4 by ANTLR 4.13.0. DO NOT EDIT.
+// Code generated from Grammar.g4 by ANTLR 4.13.0. DO NOT EDIT.
 
 package parser
 
@@ -14,14 +14,14 @@ var _ = fmt.Printf
 var _ = sync.Once{}
 var _ = unicode.IsLetter
 
-type MyGrammarLexer struct {
+type GrammarLexer struct {
 	*antlr.BaseLexer
 	channelNames []string
 	modeNames    []string
 	// TODO: EOF string
 }
 
-var MyGrammarLexerLexerStaticData struct {
+var GrammarLexerLexerStaticData struct {
 	once                   sync.Once
 	serializedATN          []int32
 	ChannelNames           []string
@@ -34,8 +34,8 @@ var MyGrammarLexerLexerStaticData struct {
 	decisionToDFA          []*antlr.DFA
 }
 
-func mygrammarlexerLexerInit() {
-	staticData := &MyGrammarLexerLexerStaticData
+func grammarlexerLexerInit() {
+	staticData := &GrammarLexerLexerStaticData
 	staticData.ChannelNames = []string{
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN",
 	}
@@ -179,70 +179,70 @@ func mygrammarlexerLexerInit() {
 	}
 }
 
-// MyGrammarLexerInit initializes any static state used to implement MyGrammarLexer. By default the
+// GrammarLexerInit initializes any static state used to implement GrammarLexer. By default the
 // static state used to implement the lexer is lazily initialized during the first call to
-// NewMyGrammarLexer(). You can call this function if you wish to initialize the static state ahead
+// NewGrammarLexer(). You can call this function if you wish to initialize the static state ahead
 // of time.
-func MyGrammarLexerInit() {
-	staticData := &MyGrammarLexerLexerStaticData
-	staticData.once.Do(mygrammarlexerLexerInit)
+func GrammarLexerInit() {
+	staticData := &GrammarLexerLexerStaticData
+	staticData.once.Do(grammarlexerLexerInit)
 }
 
-// NewMyGrammarLexer produces a new lexer instance for the optional input antlr.CharStream.
-func NewMyGrammarLexer(input antlr.CharStream) *MyGrammarLexer {
-	MyGrammarLexerInit()
-	l := new(MyGrammarLexer)
+// NewGrammarLexer produces a new lexer instance for the optional input antlr.CharStream.
+func NewGrammarLexer(input antlr.CharStream) *GrammarLexer {
+	GrammarLexerInit()
+	l := new(GrammarLexer)
 	l.BaseLexer = antlr.NewBaseLexer(input)
-	staticData := &MyGrammarLexerLexerStaticData
+	staticData := &GrammarLexerLexerStaticData
 	l.Interpreter = antlr.NewLexerATNSimulator(l, staticData.atn, staticData.decisionToDFA, staticData.PredictionContextCache)
 	l.channelNames = staticData.ChannelNames
 	l.modeNames = staticData.ModeNames
 	l.RuleNames = staticData.RuleNames
 	l.LiteralNames = staticData.LiteralNames
 	l.SymbolicNames = staticData.SymbolicNames
-	l.GrammarFileName = "MyGrammar.g4"
+	l.GrammarFileName = "Grammar.g4"
 	// TODO: l.EOF = antlr.TokenEOF
 
 	return l
 }
 
-// MyGrammarLexer tokens.
+// GrammarLexer tokens.
 const (
-	MyGrammarLexerT__0      = 1
-	MyGrammarLexerT__1      = 2
-	MyGrammarLexerT__2      = 3
-	MyGrammarLexerT__3      = 4
-	MyGrammarLexerT__4      = 5
-	MyGrammarLexerT__5      = 6
-	MyGrammarLexerT__6      = 7
-	MyGrammarLexerCONSTANTE = 8
-	MyGrammarLexerNUM_INT   = 9
-	MyGrammarLexerNUM_DEC   = 10
-	MyGrammarLexerTEXTO     = 11
-	MyGrammarLexerCOMP      = 12
-	MyGrammarLexerMAIN      = 13
-	MyGrammarLexerINT       = 14
-	MyGrammarLexerFLOAT     = 15
-	MyGrammarLexerCHAR      = 16
-	MyGrammarLexerBOOLEAN   = 17
-	MyGrammarLexerVOID      = 18
-	MyGrammarLexerRETURN    = 19
-	MyGrammarLexerIF        = 20
-	MyGrammarLexerELSE      = 21
-	MyGrammarLexerWHILE     = 22
-	MyGrammarLexerSCANF     = 23
-	MyGrammarLexerPRINTLN   = 24
-	MyGrammarLexerLPAREN    = 25
-	MyGrammarLexerRPAREN    = 26
-	MyGrammarLexerLBRACE    = 27
-	MyGrammarLexerRBRACE    = 28
-	MyGrammarLexerSEMI      = 29
-	MyGrammarLexerASSIGN    = 30
-	MyGrammarLexerPLUS      = 31
-	MyGrammarLexerMINUS     = 32
-	MyGrammarLexerMUL       = 33
-	MyGrammarLexerDIV       = 34
-	MyGrammarLexerMOD       = 35
-	MyGrammarLexerID        = 36
-	MyGrammarLexerWS        = 37
+	GrammarLexerT__0      = 1
+	GrammarLexerT__1      = 2
+	GrammarLexerT__2      = 3
+	GrammarLexerT__3      = 4
+	GrammarLexerT__4      = 5
+	GrammarLexerT__5      = 6
+	GrammarLexerT__6      = 7
+	GrammarLexerCONSTANTE = 8
+	GrammarLexerNUM_INT   = 9
+	GrammarLexerNUM_DEC   = 10
+	GrammarLexerTEXTO     = 11
+	GrammarLexerCOMP      = 12
+	GrammarLexerMAIN      = 13
+	GrammarLexerINT       = 14
+	GrammarLexerFLOAT     = 15
+	GrammarLexerCHAR      = 16
+	GrammarLexerBOOLEAN   = 17
+	GrammarLexerVOID      = 18
+	GrammarLexerRETURN    = 19
+	GrammarLexerIF        = 20
+	GrammarLexerELSE      = 21
+	GrammarLexerWHILE     = 22
+	GrammarLexerSCANF     = 23
+	GrammarLexerPRINTLN   = 24
+	GrammarLexerLPAREN    = 25
+	GrammarLexerRPAREN    = 26
+	GrammarLexerLBRACE    = 27
+	GrammarLexerRBRACE    = 28
+	GrammarLexerSEMI      = 29
+	GrammarLexerASSIGN    = 30
+	GrammarLexerPLUS      = 31
+	GrammarLexerMINUS     = 32
+	GrammarLexerMUL       = 33
+	GrammarLexerDIV       = 34
+	GrammarLexerMOD       = 35
+	GrammarLexerID        = 36
+	GrammarLexerWS        = 37
 )

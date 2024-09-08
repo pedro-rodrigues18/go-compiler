@@ -1,4 +1,4 @@
-grammar MyGrammar;
+grammar Grammar;
 
 // Ponto de entrada principal
 programa : listaFuncoes principal EOF ;

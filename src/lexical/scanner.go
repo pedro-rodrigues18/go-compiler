@@ -8,43 +8,68 @@ func Scan(sourceCode string) []Token {
 	var tokens []Token
 	start := 0
 
-	for i := range sourceCode {
+	for i := 0; i < len(sourceCode); i++ {
+		for start < len(sourceCode) && unicode.IsSpace(rune(sourceCode[start])) {
+			start++
+		}
+		i = start
+
+		if i >= len(sourceCode) {
+			break
+		}
+
 		switch {
-		case isIdentifier(sourceCode[start : i+1]):
-			continue
-		case unicode.IsSpace(rune(sourceCode[i])):
-			if start < i {
-				token := Token{Type: IDENTIFIER, Value: sourceCode[start:i]}
-				tokens = append(tokens, token)
-			}
-			start = i + 1
-		case isKeyword(sourceCode[start : i+1]):
-			token := Token{Type: KEYWORD, Value: sourceCode[start : i+1]}
-			tokens = append(tokens, token)
-			start = i + 1
-
-		case isString(sourceCode[start : i+1]):
-			token := Token{Type: STRING, Value: sourceCode[start : i+1]}
-			tokens = append(tokens, token)
-		case isNumber(sourceCode[start : i+1]):
-			token := Token{Type: NUMBER, Value: sourceCode[start : i+1]}
-			tokens = append(tokens, token)
-			start = i + 1
-
-		default:
-			token := Token{Type: SYMBOL, Value: string(sourceCode[i])}
-			tokens = append(tokens, token)
-			start = i + 1
+			case unicode.IsLetter(rune(sourceCode[i])) || sourceCode[i] == '_':
+				for i < len(sourceCode) && (unicode.IsLetter(rune(sourceCode[i])) || unicode.IsDigit(rune(sourceCode[i])) || sourceCode[i] == '_') {
+					i++
+				}
+				value := sourceCode[start:i]
+				if isKeyword(value) {
+					tokens = append(tokens, Token{Type: KEYWORD, Value: value})
+				} else {
+					tokens = append(tokens, Token{Type: ID, Value: value})
+				}
+				start = i
+			case unicode.IsDigit(rune(sourceCode[i])):
+				for i < len(sourceCode) && unicode.IsDigit(rune(sourceCode[i])) {
+					i++
+				}
+				tokens = append(tokens, Token{Type: NUMBER, Value: sourceCode[start:i]})
+				start = i
+			case sourceCode[i] == '"':
+				j := i + 1
+				for j < len(sourceCode) && sourceCode[j] != '"' {
+					j++
+				}
+				if j < len(sourceCode) {
+					tokens = append(tokens, Token{Type: STRING, Value: sourceCode[start : j+1]})
+					i = j
+				}
+				start = i + 1
+			case isSymbol(string(sourceCode[i])):
+				tokens = append(tokens, Token{Type: SYMBOL, Value: string(sourceCode[i])})
+				start = i + 1
+			case unicode.IsSpace(rune(sourceCode[i])):
+				start = i + 1
 		}
 	}
+
 	if start < len(sourceCode) {
-		token := Token{Type: IDENTIFIER, Value: sourceCode[start:]}
-		tokens = append(tokens, token)
+		tokens = append(tokens, Token{Type: ID, Value: sourceCode[start:]})
 	}
 
-	tokens = append(tokens, Token{Type: EOF, Value: ""})
+	tokens = append(tokens, Token{Type: EOF, Value: "$"})
 
 	return tokens
+}
+
+func isSymbol(value string) bool {
+	symbols := map[string]bool{
+		"+": true, "-": true, "*": true, "/": true,
+		"=": true, "<": true, ">": true, "(": true, ")": true,
+		"{": true, "}": true, "[": true, "]": true, ";": true, ",": true,
+	}
+	return symbols[value]
 }
 
 func isKeyword(value string) bool {

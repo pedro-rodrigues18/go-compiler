@@ -4,7 +4,7 @@ type TokenType int
 
 const (
 	KEYWORD TokenType = iota
-	IDENTIFIER
+	ID
 	NUMBER
 	SYMBOL
 	STRING

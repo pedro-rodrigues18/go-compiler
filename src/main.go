@@ -11,7 +11,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/pedro-rodrigues18/go-compiler/src/lexical"
 	"github.com/pedro-rodrigues18/go-compiler/src/parser"
+	"github.com/pedro-rodrigues18/go-compiler/src/syntax"
 
 	"github.com/antlr4-go/antlr/v4"
 )
@@ -68,5 +70,42 @@ func main() {
 	listener := &myListener{}
 	antlr.ParseTreeWalkerDefault.Walk(listener, tree)
 
-	fmt.Println("\nAnálise sintática concluída.")
+	fmt.Println("\nAnálise sintática com ANTLR concluída.")
+
+	fmt.Println("=====================================")
+
+	file, err := os.Open("./input/teste.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer file.Close()
+
+	fileInfo, err := file.Stat()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	size := fileInfo.Size()
+	fileContent := make([]byte, size)
+
+	_, err = file.Read(fileContent)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	sourceCode := string(fileContent)
+	newTokens := lexical.Scan(sourceCode)
+
+	fmt.Println("Tokens:")
+	for _, token := range newTokens {
+		fmt.Printf("%v: %v\n", token.Type, token.Value)
+	}
+
+	fmt.Println("\nAnálise Sintática Manual:")
+
+	syntax.Parse(newTokens)
+
 }

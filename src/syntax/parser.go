@@ -8,255 +8,255 @@ import (
 )
 
 var parsingTable = map[string]map[string]string{
-	"PROGRAMA": {
-		"int":     "LISTAFUNÇÕES PRINCIPAL",
-		"float":   "LISTAFUNÇÕES PRINCIPAL",
-		"char":    "LISTAFUNÇÕES PRINCIPAL",
-		"boolean": "LISTAFUNÇÕES PRINCIPAL",
-		"void":    "LISTAFUNÇÕES PRINCIPAL",
-		"main":    "LISTAFUNÇÕES PRINCIPAL",
+	"programa": {
+		"main": "listaFuncoes principal EOF",
 	},
-	"LISTAFUNÇÕES": {
-		"int":     "DECFUNÇÃO LISTAFUNÇÕES",
-		"float":   "DECFUNÇÃO LISTAFUNÇÕES",
-		"char":    "DECFUNÇÃO LISTAFUNÇÕES",
-		"boolean": "DECFUNÇÃO LISTAFUNÇÕES",
-		"void":    "DECFUNÇÃO LISTAFUNÇÕES",
-		"main":    "e",
-		"$":       "e",
+	"listaFuncoes": {
+		"int":     "decFuncao listaFuncoes",
+		"float":   "decFuncao listaFuncoes",
+		"char":    "decFuncao listaFuncoes",
+		"boolean": "decFuncao listaFuncoes",
+		"void":    "decFuncao listaFuncoes",
+		"main":    "",
+		"$":       "",
 	},
-	"DECFUNÇÃO": {
-		"int":     "TIPORETORNO id ( PARÂMETROS ) BLOCO",
-		"float":   "TIPORETORNO id ( PARÂMETROS ) BLOCO",
-		"char":    "TIPORETORNO id ( PARÂMETROS ) BLOCO",
-		"boolean": "TIPORETORNO id ( PARÂMETROS ) BLOCO",
-		"void":    "TIPORETORNO id ( PARÂMETROS ) BLOCO",
-		"main":    "TIPORETORNO id ( ) BLOCO",
+	"decFuncao": {
+		"int":     "tipoRetorno ID ( parametros ) bloco",
+		"float":   "tipoRetorno ID ( parametros ) bloco",
+		"char":    "tipoRetorno ID ( parametros ) bloco",
+		"boolean": "tipoRetorno ID ( parametros ) bloco",
+		"void":    "tipoRetorno ID ( parametros ) bloco",
 	},
-	"TIPORETORNO": {
-		"int":     "TIPO",
-		"float":   "TIPO",
-		"char":    "TIPO",
-		"boolean": "TIPO",
+	"tipoRetorno": {
+		"int":     "tipo",
+		"float":   "tipo",
+		"char":    "tipo",
+		"boolean": "tipo",
 		"void":    "void",
 	},
-	"TIPO": {
-		"int":     "TIPOBASE",
-		"float":   "TIPOBASE",
-		"char":    "TIPOBASE",
-		"boolean": "TIPOBASE",
+	"tipo": {
+		"int":     "tipoBase dimensao",
+		"float":   "tipoBase dimensao",
+		"char":    "tipoBase dimensao",
+		"boolean": "tipoBase dimensao",
 	},
-	"TIPOBASE": {
+	"tipoBase": {
 		"int":     "int",
 		"float":   "float",
 		"char":    "char",
 		"boolean": "boolean",
 	},
-	"DIMENSÃO": {
-		"[":  "[ num_int ] DIMENSÃO",
-		")":  "e",
-		"(":  "e",
-		"id": "e",
-		",":  "e",
+	"dimensao": {
+		"[":  "[ NUM_INT ] dimensao",
+		")":  "",
+		"ID": "",
 	},
-	"PARÂMETROS": {
-		"int":     "TIPO id LISTAPARAMETROS",
-		"float":   "TIPO id LISTAPARAMETROS",
-		"char":    "TIPO id LISTAPARAMETROS",
-		"boolean": "TIPO id LISTAPARAMETROS",
-		")":       "e",
+	"parametros": {
+		"int":     "tipo ID listaParametros",
+		"float":   "tipo ID listaParametros",
+		"char":    "tipo ID listaParametros",
+		"boolean": "tipo ID listaParametros",
+		")":       "",
 	},
-	"LISTAPARAMETROS": {
-		")": "e",
-		",": ", TIPO id LISTAPARAMETROS",
+	"listaParametros": {
+		",": ", tipo ID listaParametros",
+		")": "",
 	},
-	"PRINCIPAL": {
-		"main": "main ( ) BLOCO",
+	"principal": {
+		"main": "main ( ) bloco",
 	},
-	"BLOCO": {
-		"{": "{ COMANDOS }",
+	"bloco": {
+		"{": "{ listaVariaveis comandos }",
 	},
-	"LISTAVARIAVEIS": {
-		"int":     "TIPO id LISTAID ; LISTAVARIAVEIS",
-		"float":   "TIPO id LISTAID ; LISTAVARIAVEIS",
-		"char":    "TIPO id LISTAID ; LISTAVARIAVEIS",
-		"boolean": "TIPO id LISTAID ; LISTAVARIAVEIS",
-		"}":       "e",
-		"id":      "e",
-		"=":       "e",
+	"listaVariaveis": {
+		"int":     "tipo ID listaId ; listaVariaveis",
+		"float":   "tipo ID listaId ; listaVariaveis",
+		"char":    "tipo ID listaId ; listaVariaveis",
+		"boolean": "tipo ID listaId ; listaVariaveis",
+		"return":  "",
+		"}":       "",
 	},
-	"LISTAID": {
-		",": ", id LISTAID",
-		";": "e",
+	"listaId": {
+		",": ", ID listaId",
+		";": "",
 	},
-	"COMANDOS": {
-		"int":     "COMANDO COMANDOS",
-		"scanf":   "COMANDO COMANDOS",
-		"println": "COMANDO COMANDOS",
-		"id":      "COMANDO COMANDOS",
-		"if":      "COMANDO COMANDOS",
-		"while":   "COMANDO COMANDOS",
-		"for":     "COMANDO COMANDOS",
-		"return":  "COMANDO COMANDOS",
-		"}":       "e",
-		";":       "e",
+	"comandos": {
+		"scanf":   "comando comandos",
+		"println": "comando comandos",
+		"ID":      "comando comandos",
+		"if":      "comando comandos",
+		"while":   "comando comandos",
+		"return":  "comando comandos",
+		"}":       "",
 	},
-	"COMANDO": {
-		"int":     "DECLARAÇÃO",
-		"scanf":   "LEITURA",
-		"println": "ESCRITA",
-		"id":      "ATRIBUIÇÃO",
-		"if":      "SELEÇÃO",
-		"while":   "ENQUANTO",
-		"return":  "RETORNO",
+	"comando": {
+		"scanf":   "leitura",
+		"println": "escrita",
+		"ID":      "atribuicao",
+		"if":      "selecao",
+		"while":   "enquanto",
+		"return":  "retorno",
 	},
-	"LEITURA": {
-		"scanf": "scanf ( TERMOLEITURA NOVOTERMOLEITURA ) ;",
+	"leitura": {
+		"scanf": "scanf ( termoLeitura novoTermoLeitura ) ;",
 	},
-	"TERMOLEITURA": {
-		"id": "id DIMENSAO2",
+	"termoLeitura": {
+		"ID": "ID dimensao2",
 	},
-	"NOVOTERMOLEITURA": {
-		",": ", TERMOLEITURA NOVOTERMOLEITURA",
-		")": "e",
+	"novoTermoLeitura": {
+		",": ", termoLeitura novoTermoLeitura",
+		")": "",
 	},
-	"DIMENSAO2": {
-		"[": "[ EXPR_ADITIVA ] DIMENSAO2",
-		",": "e",
-		")": "e",
+	"dimensao2": {
+		"[": "[ exprAditiva ] dimensao2",
+		",": "",
+		")": "",
 	},
-	"ESCRITA": {
-		"println": "println ( TERMOESCRITA NOVOTERMOESCRITA ) ;",
+	"escrita": {
+		"println": "println ( termoEscrita novoTermoEscrita ) ;",
 	},
-	"TERMOESCRITA": {
-		"id":    "id DIMENSAO2",
-		"texto": "texto",
+	"termoEscrita": {
+		"ID":     "ID dimensao2",
+		"NUMBER": "NUMBER",
+		"TEXTO":  "TEXTO",
 	},
-	"NOVOTERMOESCRITA": {
-		",": ", TERMOESCRITA NOVOTERMOESCRITA",
-		")": "e",
+	"novoTermoEscrita": {
+		",": ", termoEscrita novoTermoEscrita",
+		")": "",
 	},
-	"SELEÇÃO": {
-		"if": "if ( EXPRESSÃO ) BLOCO SENÃO",
+	"selecao": {
+		"if": "if ( expressao ) bloco senao",
 	},
-	"SENÃO": {
-		"else": "else BLOCO",
-		"}":    "e",
+	"senao": {
+		"else": "else bloco",
+		"}":    "",
 	},
-	"ENQUANTO": {
-		"while": "while ( EXPRESSÃO ) BLOCO",
+	"enquanto": {
+		"while": "while ( expressao ) bloco",
 	},
-	"ATRIBUIÇÃO": {
-		"id": "id = COMPLEMENTO ;",
+	"atribuicao": {
+		"ID": "ID = complemento ;",
 	},
-	"COMPLEMENTO": {
-		"id":   "EXPRESSÃO",
-		"func": "FUNÇÃO",
+	"complemento": {
+		"ID":   "expressao",
+		"func": "funcao",
 	},
-	"FUNÇÃO": {
-		"id": "func id ( ARGUMENTOS )",
+	"funcao": {
+		"func": "func ID ( argumentos )",
 	},
-	"ARGUMENTOS": {
-		"id": "EXPRESSÃO NOVO_ARGUMENTO",
-		")":  "e",
+	"argumentos": {
+		"ID":     "expressao novoArgumento",
+		"NUMBER": "expressao novoArgumento",
+		")":      "",
 	},
-	"NOVO_ARGUMENTO": {
-		",": ", EXPRESSÃO NOVO_ARGUMENTO",
-		")": "e",
+	"novoArgumento": {
+		",": ", expressao novoArgumento",
+		")": "",
 	},
-	"RETORNO": {
-		"return": "return EXPRESSAO ;",
+	"retorno": {
+		"return": "return expressao ;",
 	},
-	"EXPRESSÃO": {
-		"id":      "EXPR_OU",
-		"num_int": "EXPR_OU",
-		"num_dec": "EXPR_OU",
-		"(":       "EXPR_OU",
-		"+":       "EXPR_OU",
-		"-":       "EXPR_OU",
-		"!":       "EXPR_OU",
+	"expressao": {
+		"ID":     "exprOu",
+		"NUMBER": "exprOu",
+		"(":      "exprOu",
+		"!":      "exprOu",
+		"+":      "exprOu",
+		"-":      "exprOu",
 	},
-	"EXPR_OU": {
-		"id":      "EXPR_E EXPR_OU2",
-		"num_int": "EXPR_E EXPR_OU2",
-		"num_dec": "EXPR_E EXPR_OU2",
-		"(":       "EXPR_E EXPR_OU2",
+	"exprOu": {
+		"ID":     "exprE exprOu2",
+		"NUMBER": "exprE exprOu2",
+		"(":      "exprE exprOu2",
+		"!":      "exprE exprOu2",
+		"+":      "exprE exprOu2",
+		"-":      "exprE exprOu2",
 	},
-	"EXPR_OU2": {
-		"||": "|| EXPR_E EXPR_OU2",
-		")":  "e",
+	"exprOu2": {
+		"||": "|| exprE exprOu2",
+		")":  "",
+		";":  "",
 	},
-	"EXPR_E": {
-		"id":      "EXPR_RELACIONAL EXPR_E2",
-		"num_int": "EXPR_RELACIONAL EXPR_E2",
-		"num_dec": "EXPR_RELACIONAL EXPR_E2",
-		"(":       "EXPR_RELACIONAL EXPR_E2",
+	"exprE": {
+		"ID":     "exprRelacional exprE2",
+		"NUMBER": "exprRelacional exprE2",
+		"(":      "exprRelacional exprE2",
+		"!":      "exprRelacional exprE2",
+		"+":      "exprRelacional exprE2",
+		"-":      "exprRelacional exprE2",
 	},
-	"EXPR_E2": {
-		"&&": "&& EXPR_RELACIONAL EXPR_E2",
-		")":  "e",
+	"exprE2": {
+		"&&": "&& exprRelacional exprE2",
+		")":  "",
+		";":  "",
 	},
-	"EXPR_RELACIONAL": {
-		"id":      "EXPR_ADITIVA EXPR_RELACIONAL2",
-		"num_int": "EXPR_ADITIVA EXPR_RELACIONAL2",
-		"num_dec": "EXPR_ADITIVA EXPR_RELACIONAL2",
-		"(":       "EXPR_ADITIVA EXPR_RELACIONAL2",
+	"exprRelacional": {
+		"ID":     "exprAditiva exprRelacional2",
+		"NUMBER": "exprAditiva exprRelacional2",
+		"(":      "exprAditiva exprRelacional2",
+		"!":      "exprAditiva exprRelacional2",
+		"+":      "exprAditiva exprRelacional2",
+		"-":      "exprAditiva exprRelacional2",
+		";":      "",
 	},
-	"EXPR_RELACIONAL2": {
-		"comp": "comp EXPR_ADITIVA",
-		")":    "e",
+	"exprRelacional2": {
+		"COMP": "COMP exprAditiva",
+		")":    "",
+		";":    "",
 	},
-	"EXPR_ADITIVA": {
-		"id":  "EXPR_MULTIPLICATIVA EXPR_ADITIVA2",
-		"num": "EXPR_MULTIPLICATIVA EXPR_ADITIVA2",
-		"(":   "EXPR_MULTIPLICATIVA EXPR_ADITIVA2",
+	"exprAditiva": {
+		"ID":     "exprMultiplicativa exprAditiva2",
+		"NUMBER": "exprMultiplicativa exprAditiva2",
+		"(":      "exprMultiplicativa exprAditiva2",
+		"!":      "exprMultiplicativa exprAditiva2",
+		"+":      "exprMultiplicativa exprAditiva2",
+		"-":      "exprMultiplicativa exprAditiva2",
 	},
-	"EXPR_ADITIVA2": {
-		"+": "+ EXPR_MULTIPLICATIVA EXPR_ADITIVA2",
-		"-": "- EXPR_MULTIPLICATIVA EXPR_ADITIVA2",
-		")": "e",
+	"exprAditiva2": {
+		"+": "+ exprMultiplicativa exprAditiva2",
+		"-": "- exprMultiplicativa exprAditiva2",
+		")": "",
+		";": "",
 	},
-	"EXPR_MULTIPLICATIVA": {
-		"id":  "FATOR EXPR_MULTIPLICATIVA2",
-		"num": "FATOR EXPR_MULTIPLICATIVA2",
-		"(":   "FATOR EXPR_MULTIPLICATIVA2",
+	"exprMultiplicativa": {
+		"ID":     "fator exprMultiplicativa2",
+		"NUMBER": "fator exprMultiplicativa2",
+		"(":      "fator exprMultiplicativa2",
+		"!":      "fator exprMultiplicativa2",
+		"+":      "fator exprMultiplicativa2",
+		"-":      "fator exprMultiplicativa2",
+		";":      "",
 	},
-	"EXPR_MULTIPLICATIVA2": {
-		"*": "* FATOR EXPR_MULTIPLICATIVA2",
-		"/": "/ FATOR EXPR_MULTIPLICATIVA2",
-		"%": "% FATOR EXPR_MULTIPLICATIVA2",
-		")": "e",
+	"exprMultiplicativa2": {
+		"*": "* fator exprMultiplicativa2",
+		"/": "/ fator exprMultiplicativa2",
+		"%": "% fator exprMultiplicativa2",
+		")": "",
+		";": "",
 	},
-	"FATOR": {
-		"id":      "TERMO",
-		"num_int": "CONSTANTE",
-		"num_dec": "CONSTANTE",
-		"(":       "( EXPRESSÃO )",
-		"!":       "! FATOR",
-		"+":       "+ TERMO",
-		"-":       "- TERMO",
+	"fator": {
+		"ID":     "sinal termo",
+		"NUMBER": "sinal termo",
+		"!":      "! fator",
+		"(":      "( expressao )",
+		"TEXTO":  "TEXTO",
 	},
-	"TERMO": {
-		"id":  "id DIMENSAO2",
-		"num": "CONSTANTE",
+	"termo": {
+		"ID":     "ID dimensao2",
+		"NUMBER": "NUMBER",
 	},
-	"CONSTANTE": {
-		"num_int": "num_int",
-		"num_dec": "num_dec",
-	},
-	"DECLARAÇÃO": {
-		"int":    "TIPO id DECLARAÇÃO2",
-		"bool":   "TIPO id DECLARAÇÃO2",
-		"string": "TIPO id DECLARAÇÃO2",
-		"float":  "TIPO id DECLARAÇÃO2",
-	},
-	"DECLARAÇÃO2": {
-		";": "e",
+	"sinal": {
+		"+":      "+",
+		"-":      "-",
+		"ID":     "",
+		"NUMBER": "",
+		"(":      "",
+		"":       "",
 	},
 }
 
 func Parse(tokens []lexical.Token) {
-	stack := []string{"$", "PROGRAMA"}
+	stack := []string{"$", "programa"}
 	tokenIndex := 0
 
 	for len(stack) > 0 {
@@ -265,20 +265,17 @@ func Parse(tokens []lexical.Token) {
 
 		fmt.Printf("Topo: %s, Token: %s\n", top, token.Value)
 
-		if top == "$" && token.Type == lexical.EOF {
+		if top == "EOF" && token.Type == lexical.EOF {
 			fmt.Println("Parse completo com sucesso!")
 			return
 		}
 
 		if isTerminal(top) {
-			//fmt.Println(top, token.Value)
-			if top == "id" && token.Type == lexical.ID {
+			// Verificação de terminais
+			if top == "ID" && token.Type == lexical.ID {
 				stack = stack[:len(stack)-1]
 				tokenIndex++
-			} else if top == "num_int" && token.Type == lexical.NUMBER && !strings.Contains(token.Value, ".") {
-				stack = stack[:len(stack)-1]
-				tokenIndex++
-			} else if top == "num_dec" && token.Type == lexical.NUMBER && strings.Contains(token.Value, ".") {
+			} else if top == "NUMBER" && token.Type == lexical.NUMBER {
 				stack = stack[:len(stack)-1]
 				tokenIndex++
 			} else if top == token.Value {
@@ -289,16 +286,17 @@ func Parse(tokens []lexical.Token) {
 				return
 			}
 		} else {
-			//fmt.Println(top)
-			production, exists := parsingTable[top][token.Value]
-			//fmt.Println(production, exists)
+			// Não-terminal procurar a produção correspondente na tabela
+			production, exists := parsingTable[top][convertToString(token.Type, token.Value)]
+
 			if !exists {
 				fmt.Printf("Erro de sintaxe: nenhuma produção para o não-terminal '%s' com o token '%s'\n", top, token.Value)
 				return
 			}
 
 			stack = stack[:len(stack)-1]
-			if production != "e" {
+
+			if production != "" {
 				productions := strings.Split(production, " ")
 				for i := len(productions) - 1; i >= 0; i-- {
 					stack = append(stack, productions[i])
@@ -310,11 +308,33 @@ func Parse(tokens []lexical.Token) {
 	fmt.Println("Erro de sintaxe: fim inesperado de entrada")
 }
 
+func convertToString(t lexical.TokenType, value string) string {
+	switch t {
+	case lexical.KEYWORD:
+		return value // Retorna o valor literal
+	case lexical.ID:
+		return "ID"
+	case lexical.NUMBER:
+		return "NUMBER"
+	case lexical.SYMBOL:
+		return value
+	case lexical.STRING:
+		return "STRING"
+	case lexical.CHARACTER:
+		return "CHARACTER"
+	case lexical.EOF:
+		return "$"
+	default:
+		return ""
+	}
+}
+
 func isTerminal(symbol string) bool {
 	terminals := map[string]bool{
 		"main": true, "int": true, "char": true, "float": true, "boolean": true,
-		"if": true, "for": true, "while": true, "return": true, "num_int": true, "num_dec": true,
-		"(": true, ")": true, "{": true, "}": true, ";": true, "=": true, "id": true,
+		"if": true, "else": true, "while": true, "return": true,
+		"NUMBER": true, "ID": true, "STRING": true,
+		"(": true, ")": true, "{": true, "}": true, ";": true, "=": true,
 	}
 	return terminals[symbol]
 }

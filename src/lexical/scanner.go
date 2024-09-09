@@ -58,7 +58,7 @@ func Scan(sourceCode string) []Token {
 		tokens = append(tokens, Token{Type: ID, Value: sourceCode[start:]})
 	}
 
-	tokens = append(tokens, Token{Type: EOF, Value: "$"})
+	tokens = append(tokens, Token{Type: EOF, Value: "EOF"})
 
 	return tokens
 }
